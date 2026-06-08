@@ -3,194 +3,183 @@ import { SiteNav } from "@/components/SiteNav";
 
 const HTML = `
 <main class="relative min-h-screen pt-24">
-<!-- Hero Section -->
-<section class="relative px-margin-desktop py-xl topo-pattern">
-<div class="max-w-4xl">
-<p class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-[0.3em] mb-sm">The Engineering Legacy</p>
-<h1 class="font-display-lg text-display-lg text-primary mb-md leading-tight">
-                    Vigilance Forged in the <span class="italic font-light">Highlands</span>.
-                </h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    RedFox was born from the rugged resilience of the Scottish Highlands—a landscape where survival depends on acute awareness and unwavering focus. We translate that instinctual vigilance into the world's most sophisticated cybersecurity architecture.
-                </p>
-</div>
-<div class="mt-xl grid grid-cols-12 gap-gutter">
-<div class="col-span-12 md:col-span-8 h-[400px] overflow-hidden matte-card relative group">
-<img alt="Highlands landscape" class="w-full h-full object-cover opacity-60 grayscale group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLs-HrZ1eU7baRc7hCpuWBaz9-QFofDWaX4z51bwy7-XSHGwhpaiBvE5-tv70PK1IE_QYVkh0EnMLvNrE6kvG4RbfrbYDvoPdk27PTxaje0fOQUWxEd3wy_PlEwfImqMVSZ6xU09SiDdDDV3CbdcEBxZrP0Uj7S_Qf_Dsr_OxRPy8SWCPAdCVgm1y53aUwu8MHUwooroXfrSISHOcXmZeAe24EhjTExLe3Ci55unXppIuxJC20ECjQslZQ"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-<div class="absolute bottom-md left-md">
-<p class="font-headline-lg text-headline-lg text-stark-white">The Origin Point</p>
-<p class="text-on-surface-variant">Inverness, Engineering Hub</p>
-</div>
-</div>
-<div class="col-span-12 md:col-span-4 flex flex-col justify-between p-md matte-card">
-<div class="space-y-sm">
-<div class="w-12 h-[1px] bg-brand-crimson"></div>
-<h3 class="font-title-md text-title-md">BitLabs Heritage</h3>
-<p class="text-on-surface-variant font-body-md">
-                            Engineered by BitLabs Technology PLC, RedFox leverages decades of high-integrity infrastructure experience.
-                        </p>
-</div>
-<a class="font-label-sm text-label-sm text-brand-crimson hover:tracking-widest transition-all flex items-center gap-xs uppercase" href="#">
-                        Visit BitLabs <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Editorial Content -->
-<div class="editorial-line"></div>
-<section class="px-margin-desktop py-xl grid grid-cols-1 md:grid-cols-2 gap-xl">
-<div class="space-y-md">
-<h2 class="font-headline-lg text-headline-lg text-primary">Our Mission</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant">
-                    To provide a digital sanctuary through proactive intelligence. We believe security shouldn't be a reactive chore but a silent, omnipresent layer of protection that allows innovation to thrive without fear.
-                </p>
-<div class="pt-md space-y-sm">
-<div class="flex items-start gap-md group">
-<div class="mt-1 w-6 h-6 flex items-center justify-center border border-outline-variant group-hover:bg-brand-crimson group-hover:border-brand-crimson transition-colors">
-<span class="material-symbols-outlined text-[16px] group-hover:text-white">check</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-stark-white uppercase">Proactive Hunting</p>
-<p class="text-on-surface-variant text-sm">Identifying threats before they breach the perimeter.</p>
-</div>
-</div>
-<div class="flex items-start gap-md group">
-<div class="mt-1 w-6 h-6 flex items-center justify-center border border-outline-variant group-hover:bg-brand-crimson group-hover:border-brand-crimson transition-colors">
-<span class="material-symbols-outlined text-[16px] group-hover:text-white">check</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-stark-white uppercase">Sovereign Resilience</p>
-<p class="text-on-surface-variant text-sm">Ensuring data integrity in the most hostile environments.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative h-full min-h-[300px] matte-card p-xl flex flex-col justify-center border-l border-outline-variant/20">
-<div class="absolute top-0 right-0 p-md">
-<span class="text-[80px] font-black opacity-[0.03] select-none text-brand-crimson">FOX</span>
-</div>
-<blockquote class="relative">
-<p class="font-headline-lg text-headline-lg italic font-light text-primary-fixed mb-sm">
-                        "Security is not a product, it's a state of constant, quiet observation."
-                    </p>
-<cite class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">— Lead Architect, RedFox</cite>
-</blockquote>
-</div>
-</section>
-<!-- Bento Grid: Core Pillars -->
-<section class="px-margin-desktop py-xl bg-surface-container-lowest/50">
-<h2 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">The Three Pillars</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-<!-- Pillar 1 -->
-<div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-2 transition-transform duration-300 border-t-2 border-t-brand-crimson">
-<span class="material-symbols-outlined text-4xl text-brand-crimson" style="font-variation-settings: 'FILL' 1;">security</span>
-<h3 class="font-title-md text-title-md text-stark-white">Engineering Prowess</h3>
-<p class="text-on-surface-variant text-sm">Backed by the engineering heavyweight <span class="text-brand-crimson underline cursor-pointer">BitLabs Technology PLC</span>, our code is audited for maximum performance and zero-day resistance.</p>
-<div class="mt-auto h-[1px] bg-outline-variant/30"></div>
-</div>
-<!-- Pillar 2 -->
-<div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-2 transition-transform duration-300 border-t-2 border-t-outline">
-<span class="material-symbols-outlined text-4xl text-outline" style="font-variation-settings: 'FILL' 1;">radar</span>
-<h3 class="font-title-md text-title-md text-stark-white">Highland Vigilance</h3>
-<p class="text-on-surface-variant text-sm">Adaptive algorithms inspired by natural survival instincts. RedFox doesn't just watch; it anticipates patterns across the global threat landscape.</p>
-<div class="mt-auto h-[1px] bg-outline-variant/30"></div>
-</div>
-<!-- Pillar 3 -->
-<div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-2 transition-transform duration-300 border-t-2 border-t-brand-crimson">
-<span class="material-symbols-outlined text-4xl text-brand-crimson" style="font-variation-settings: 'FILL' 1;">visibility</span>
-<h3 class="font-title-md text-title-md text-stark-white">Total Transparency</h3>
-<p class="text-on-surface-variant text-sm">In a world of black boxes, we offer clarity. Every action, alert, and automated defense is logged with cryptographically verifiable proof.</p>
-<div class="mt-auto h-[1px] bg-outline-variant/30"></div>
-</div>
-</div>
-</section>
-<!-- Engineering Heritage Section -->
-<section class="px-margin-desktop py-xl">
-<div class="matte-card p-xl grid grid-cols-1 lg:grid-cols-2 items-center gap-xl relative overflow-hidden">
-<div class="absolute inset-0 opacity-10 topo-pattern pointer-events-none"></div>
-<div>
-<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Engineering Heritage</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
-                        RedFox is a flagship product of BitLabs Technology PLC. Our lineage includes building mission-critical systems for aerospace, finance, and global logistics. This "Powerhouse" foundation ensures that while RedFox is agile, it is built on an industrial-grade core.
-                    </p>
-<div class="grid grid-cols-2 gap-md">
-<div>
-<p class="text-3xl font-bold text-brand-crimson">150+</p>
-<p class="text-xs uppercase tracking-widest text-on-surface-variant">Core Engineers</p>
-</div>
-<div>
-<p class="text-3xl font-bold text-brand-crimson">12ms</p>
-<p class="text-xs uppercase tracking-widest text-on-surface-variant">Avg Detection Speed</p>
-</div>
-</div>
-</div>
-<div class="relative rounded-lg overflow-hidden h-[350px] shadow-2xl">
-<img alt="Engineering laboratory" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu7b9D3aghE95LuKpLbPPXHQhI0izkXETjOR9LtBU88fFxXhv38LYk5WlSnT3MiCdI56NJ71cjswaGP3I8mks3xfLbaR6o2JsMN3xUpqCtyEcZKjtWIqTyQrK6HqgFsvhl5nOO1al2-E3N12xny1nW-Im2GTawy3hcCfD4OJQ2jWrxkM3V3sJhgHRSBrHpJ30TJ0UpRn3uDJXetRjV4Ue7GzcH7gd7JXfi2YN8yICH6AqYbCU9DZU4i9CU"/>
-<div class="absolute inset-0 bg-brand-crimson/5 hover:bg-transparent transition-colors cursor-pointer"></div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="px-margin-desktop py-xl border-t border-outline-variant/20 bg-surface-container-lowest">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-lg">
-<div>
-<p class="font-headline-md text-headline-md font-black tracking-tight text-stark-white mb-xs">RedFox</p>
-<p class="text-on-surface-variant text-sm">© 2024 RedFox. A subsidiary of BitLabs Technology PLC.</p>
-</div>
-<div class="flex gap-md">
-<a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="#">Privacy Policy</a>
-<a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="#">Security Standards</a>
-<a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="#">Contact Engineering</a>
-</div>
-</div>
-</footer>
-</main>
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.matte-card');
-            
-            cards.forEach(card => {
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    
-                    card.style.setProperty('--mouse-x', \`\${x}px\`);
-                    card.style.setProperty('--mouse-y', \`\${y}px\`);
-                    
-                    // Subtle light tracking effect
-                    const xPercent = (x / rect.width) * 100;
-                    const yPercent = (y / rect.height) * 100;
-                    card.style.borderColor = \`rgba(215, 38, 56, \${0.1 + (yPercent/1000)})\`;
-                });
-                
-                card.addEventListener('mouseleave', () => {
-                    card.style.borderColor = '#353534';
-                });
-            });
+  <!-- Hero Section -->
+  <section class="relative px-margin-desktop py-xl topo-pattern">
+    <div class="max-w-4xl">
+      <p class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-[0.3em] mb-sm">Our Identity · Ethiopian Highlands</p>
+      <h1 class="font-display-lg text-display-lg text-primary mb-md leading-tight">
+        Named for the <span class="italic font-light">RedFox</span> of the Northern Highlands.
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        High on the Bale and Simien plateaus roams the Ethiopian Wolf — the RedFox — one of the rarest, most specialized predators on earth. It thrives where the air is thin and the terrain unforgiving, surviving through agility, sharp awareness, endurance, and a deep adaptation to a singular environment. We built our cybersecurity awareness platform with the same instincts.
+      </p>
+    </div>
+    <div class="mt-xl grid grid-cols-12 gap-gutter">
+      <div class="col-span-12 md:col-span-8 h-[400px] overflow-hidden matte-card relative group">
+        <img alt="Ethiopian Highlands at altitude" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1535941339077-2dd1c7963098?auto=format&fit=crop&w=1600&q=80"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent"></div>
+        <div class="absolute bottom-md left-md">
+          <p class="font-headline-lg text-headline-lg text-stark-white">Bale Mountains, Ethiopia</p>
+          <p class="text-on-surface-variant">Origin of the RedFox metaphor</p>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-4 flex flex-col justify-between p-md matte-card">
+        <div class="space-y-sm">
+          <div class="w-12 h-[1px] bg-brand-crimson"></div>
+          <h3 class="font-title-md text-title-md">Engineered by BitLabs</h3>
+          <p class="text-on-surface-variant font-body-md">
+            A specialized product of BitLabs Technology PLC — a studio dedicated to building intelligent digital ecosystems for organizations that operate under pressure.
+          </p>
+        </div>
+        <a class="font-label-sm text-label-sm text-brand-crimson hover:tracking-widest transition-all flex items-center gap-xs uppercase" href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer">
+          Visit BitLabs <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            // Smooth scroll anchor behavior
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+  <div class="editorial-line"></div>
+
+  <!-- Metaphor Pillars -->
+  <section class="px-margin-desktop py-xl">
+    <div class="max-w-3xl mb-xl">
+      <p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-on-surface-variant mb-sm">Four Instincts. One Platform.</p>
+      <h2 class="font-headline-lg text-headline-lg text-primary">
+        What we learned from a wolf that lives above 3,000 metres.
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+      <div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-1 transition-transform duration-300 border-t-2 border-t-brand-crimson">
+        <span class="material-symbols-outlined text-4xl text-brand-crimson" style="font-variation-settings: 'FILL' 1;">bolt</span>
+        <h3 class="font-title-md text-title-md text-stark-white">Agility</h3>
+        <p class="text-on-surface-variant text-sm">Threats move in seconds. Our detection, response, and training loops move faster — without bureaucracy slowing the chase.</p>
+      </div>
+      <div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-1 transition-transform duration-300 border-t-2 border-t-outline">
+        <span class="material-symbols-outlined text-4xl text-stark-white" style="font-variation-settings: 'FILL' 1;">visibility</span>
+        <h3 class="font-title-md text-title-md text-stark-white">Sharp Awareness</h3>
+        <p class="text-on-surface-variant text-sm">We turn employees into sensors. Continuous awareness programs sharpen the human perimeter — the most exploited surface in modern attacks.</p>
+      </div>
+      <div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-1 transition-transform duration-300 border-t-2 border-t-outline">
+        <span class="material-symbols-outlined text-4xl text-stark-white" style="font-variation-settings: 'FILL' 1;">timer</span>
+        <h3 class="font-title-md text-title-md text-stark-white">Endurance</h3>
+        <p class="text-on-surface-variant text-sm">Security is a posture, not a campaign. Our programs are designed to sustain vigilance for years, not quarters.</p>
+      </div>
+      <div class="matte-card p-lg flex flex-col gap-md hover:-translate-y-1 transition-transform duration-300 border-t-2 border-t-brand-crimson">
+        <span class="material-symbols-outlined text-4xl text-brand-crimson" style="font-variation-settings: 'FILL' 1;">hub</span>
+        <h3 class="font-title-md text-title-md text-stark-white">Deep Adaptation</h3>
+        <p class="text-on-surface-variant text-sm">Every organization has its own altitude. We tune controls, training, and reporting to your regulatory, linguistic, and operational reality.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="editorial-line"></div>
+
+  <!-- Quote / Editorial -->
+  <section class="px-margin-desktop py-xl grid grid-cols-1 md:grid-cols-2 gap-xl items-start">
+    <div class="space-y-md">
+      <h2 class="font-headline-lg text-headline-lg text-primary">Why a Highland Predator?</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">
+        The Ethiopian RedFox isn't a generalist. It survives by knowing one terrain better than anything else in it. That is the posture we wanted for a cybersecurity awareness platform: not a broad, off-the-shelf suite, but a discipline tuned to high-stakes digital environments where mistakes are expensive and attention is the only real defense.
+      </p>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">
+        The RedFox is also endemic — found nowhere else on the planet. That uniqueness is the standard we hold ourselves to: a security culture that belongs to your organization, not borrowed from someone else's playbook.
+      </p>
+    </div>
+    <div class="relative h-full min-h-[320px] matte-card p-xl flex flex-col justify-center">
+      <div class="absolute top-0 right-0 p-md">
+        <span class="text-[80px] font-black opacity-[0.04] select-none text-brand-crimson">FOX</span>
+      </div>
+      <blockquote class="relative">
+        <p class="font-headline-lg text-headline-lg italic font-light text-primary-fixed mb-md">
+          "We didn't want a mascot. We wanted a discipline. The RedFox earns its territory through awareness — and so does every organization we protect."
+        </p>
+        <cite class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">— Founding Team, RedFox</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Parent Company / BitLabs Alignment -->
+  <section class="px-margin-desktop py-xl">
+    <div class="matte-card p-xl grid grid-cols-1 lg:grid-cols-12 gap-xl relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10 topo-pattern pointer-events-none"></div>
+      <div class="lg:col-span-7 relative">
+        <p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-brand-crimson mb-sm">From the Studio of BitLabs Technology PLC</p>
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Built inside an engineering company that builds intelligent digital ecosystems.</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">
+          RedFox is engineered by <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="text-brand-crimson underline underline-offset-4 hover:opacity-80">BitLabs Technology PLC</a> — a software studio whose mandate is to simplify complexity for institutions operating in regulated, high-trust environments. RedFox extends that mandate into the security domain: turning cybersecurity awareness into a continuous, measurable program that strengthens digital resilience.
+        </p>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
+          What you get is a platform shaped by enterprise-grade scalability, human-centered design, and the same engineering rigor BitLabs brings to every system it ships.
+        </p>
+        <div class="grid grid-cols-3 gap-md">
+          <div>
+            <p class="text-2xl font-bold text-brand-crimson">PLC</p>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-xs">Parent Company</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-brand-crimson">Endemic</p>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-xs">Local DNA</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-brand-crimson">Enterprise</p>
+            <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-xs">Grade Engineering</p>
+          </div>
+        </div>
+      </div>
+      <aside class="lg:col-span-5 relative">
+        <div class="matte-card-high p-lg h-full flex flex-col justify-between bg-black/40 border border-outline-variant/40">
+          <div>
+            <p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-on-surface-variant mb-md">Built By</p>
+            <p class="font-headline-md text-headline-md text-stark-white font-black tracking-tight mb-sm">BitLabs Technology PLC</p>
+            <p class="text-on-surface-variant text-sm mb-lg">
+              Building intelligent digital ecosystems — simplifying complexity, and engineering cybersecurity awareness programs that strengthen organizational digital resilience.
+            </p>
+            <div class="space-y-xs text-sm">
+              <div class="flex justify-between border-b border-outline-variant/30 py-xs">
+                <span class="text-on-surface-variant">Discipline</span>
+                <span class="text-stark-white">Software Engineering</span>
+              </div>
+              <div class="flex justify-between border-b border-outline-variant/30 py-xs">
+                <span class="text-on-surface-variant">Scale</span>
+                <span class="text-stark-white">Enterprise-grade</span>
+              </div>
+              <div class="flex justify-between border-b border-outline-variant/30 py-xs">
+                <span class="text-on-surface-variant">Method</span>
+                <span class="text-stark-white">Human-centered design</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="mt-lg inline-flex items-center justify-between gap-sm border border-brand-crimson text-brand-crimson px-md py-sm uppercase text-label-sm tracking-widest hover:bg-brand-crimson hover:text-white transition-colors">
+            <span>bitlabsbuild.com</span>
+            <span class="material-symbols-outlined text-[16px]">north_east</span>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-margin-desktop py-xl border-t border-outline-variant/20 bg-surface-container-lowest">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-lg">
+      <div>
+        <p class="font-headline-md text-headline-md font-black tracking-tight text-stark-white mb-xs">RedFox</p>
+        <p class="text-on-surface-variant text-sm">© 2026 RedFox — A product of <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="text-brand-crimson hover:underline">BitLabs Technology PLC</a>.</p>
+      </div>
+      <div class="flex gap-md">
+        <a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="#">Privacy Policy</a>
+        <a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="#">Security Standards</a>
+        <a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="/contact">Contact Engineering</a>
+      </div>
+    </div>
+  </footer>
+</main>
 `;
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "RedFox — About" },
-      { name: "description", content: "RedFox cybersecurity awareness platform — about." },
+      { title: "RedFox — About | Engineered by BitLabs Technology PLC" },
+      { name: "description", content: "RedFox is a cybersecurity awareness platform inspired by the Ethiopian RedFox of the northern highlands, engineered by BitLabs Technology PLC." },
     ],
   }),
   component: Page,
