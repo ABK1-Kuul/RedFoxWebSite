@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteNav } from "@/components/SiteNav";
 
 const HTML = `\`\`\`html
 
@@ -129,22 +130,6 @@ const HTML = `\`\`\`html
             background-size: 48px 48px;
         }
     </style>
-<header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant px-margin-desktop py-4 flex justify-between items-center max-w-container-max-width mx-auto left-1/2 -translate-x-1/2">
-<div class="flex items-center gap-2">
-<img alt="RedFox" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnwuZmTsCPJXibUoiKy_QhjTNh1zegbxHNPDLmHEko39wJx7_-4D7LFVIWkypJen7M-1zHhBFvReXZ5LxUT2TPihzdczE4ixcrRMuKTq4Ym1SwLhlGCkFc9rQCH6hwIofB01-L8Rwh5_FlICqtZUx-pMLYmBmwwi5g3M7ipaYRNp2il2WEmd3EjvkLQYnZtN7NIeG1VXqUPP1JZZ7SxUb4r27l5nxGPzoyBiNN6duzYdI0asMGu90zoCVlUOtSmS_L8tGnSE9-TQs"/>
-<span class="font-headline-md text-headline-md font-bold text-on-surface">RedFox</span>
-</div>
-<nav class="hidden md:flex gap-8">
-<a class="font-label-md text-label-md text-on-surface border-b border-brand-crimson pb-1" href="/solutions">Solutions</a>
-<a class="font-label-md text-label-md text-outline hover:text-on-surface transition-colors" href="/platform">Platform</a>
-<a class="font-label-md text-label-md text-outline hover:text-on-surface transition-colors" href="/pricing">Pricing</a>
-<a class="font-label-md text-label-md text-outline hover:text-on-surface transition-colors" href="/resources">Resources</a>
-</nav>
-<div class="flex items-center gap-4">
-<a href="/contact" class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors">Login</a>
-<a href="/contact" class="bg-brand-crimson text-white px-6 py-2 font-label-md text-label-md rounded hover:opacity-90 active:scale-95 transition-all">Request Demo</a>
-</div>
-</header>
 <main class="min-h-screen w-full pt-32 pb-xl">
 <!-- Header Section -->
 <section class="max-w-5xl mx-auto mb-xl text-center px-margin-mobile">
@@ -314,7 +299,6 @@ const HTML = `\`\`\`html
 
 
 \`\`\``;
-
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
@@ -326,5 +310,10 @@ export const Route = createFileRoute("/pricing")({
 });
 
 function Page() {
-  return <div dangerouslySetInnerHTML={{ __html: HTML }} />;
+  return (
+    <>
+      <SiteNav />
+      <div dangerouslySetInnerHTML={{ __html: HTML }} />
+    </>
+  );
 }
