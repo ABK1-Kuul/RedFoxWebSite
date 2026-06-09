@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
-import logoAsset from "@/assets/redfox-logo.jpg.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -12,7 +11,7 @@ const links = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-const LOGO_URL = logoAsset.url;
+const LOGO_URL = "/logo.png";
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);

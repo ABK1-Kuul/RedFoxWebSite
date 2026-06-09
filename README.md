@@ -117,6 +117,7 @@ npm run format
 
 - `@lovable.dev/vite-tanstack-config` already configures React, Tailwind, Nitro, and path aliases. Avoid manually duplicating those plugins in `vite.config.ts`.
 - The app uses a root error boundary in `src/routes/__root.tsx` and server-side error handling in `src/server.ts`.
+- The site logo and favicon point to `public/logo.png`. Add your logo icon file there to update the site icon everywhere.
 - Assets and static styles are loaded through `src/styles.css`, `public/redfox-styles.css`, and the Vite asset pipeline.
 
 ## Useful Files

@@ -82,8 +82,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/jpeg", href: "/__l5e/assets-v1/10f1a058-dbaa-43c9-b2dc-6a3b8633380d/redfox-logo.jpg" },
-      { rel: "apple-touch-icon", href: "/__l5e/assets-v1/10f1a058-dbaa-43c9-b2dc-6a3b8633380d/redfox-logo.jpg" },
+      { rel: "icon", type: "image/png", href: "/logo.png" },
+      { rel: "apple-touch-icon", href: "/logo.png" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" },
       { rel: "stylesheet", href: "/redfox-styles.css" },
