@@ -116,50 +116,44 @@ const HTML = `
       <div class="absolute inset-0 opacity-10 topo-pattern pointer-events-none"></div>
       <div class="lg:col-span-7 relative">
         <p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-brand-crimson mb-sm">A BitLabs Technology PLC Product</p>
-        <h2 class="font-headline-lg text-headline-lg text-primary mb-md">Backed by an engineering company that builds intelligent digital ecosystems.</h2>
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-md">A studio building intelligent digital ecosystems for the future.</h2>
         <p class="font-body-lg text-body-lg text-on-surface-variant mb-md">
-          RedFox is engineered by <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="text-brand-crimson underline underline-offset-4 hover:opacity-80">BitLabs Technology PLC</a> — a registered software studio with a track record of shipping mission-critical systems for banks, regulators, and large enterprises. That engineering pedigree is what lets RedFox scale from a 50-person team to a 50,000-employee organization without losing performance or auditability.
+          <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="text-brand-crimson underline underline-offset-4 hover:opacity-80">BitLabs Technology PLC</a> develops scalable enterprise systems, educational technologies, cybersecurity platforms, and digital transformation solutions — engineered to help organizations operate smarter, grow faster, and innovate confidently.
         </p>
         <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg">
-          When you deploy RedFox, you also get access to BitLabs' broader expertise in cloud architecture, integration engineering, and secure software delivery.
+          RedFox sits inside a focused product suite alongside <strong class="text-stark-white">Sinq Authoring Tool</strong> (eLearning authoring with SCORM &amp; cmi5) and <strong class="text-stark-white">Tankua</strong> (digital infrastructure for service ecosystems) — sharing the same engineering backbone, security posture, and design discipline.
         </p>
-        <div class="grid grid-cols-3 gap-md">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-md">
           <div>
-            <p class="text-2xl font-bold text-brand-crimson">PLC</p>
-            <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-xs">Registered Entity</p>
+            <p class="text-sm font-bold text-brand-crimson uppercase tracking-wider">Enterprise</p>
+            <p class="text-xs text-on-surface-variant mt-xs">Scalable systems engineered for long-term impact</p>
           </div>
           <div>
-            <p class="text-2xl font-bold text-brand-crimson">10+ yrs</p>
-            <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-xs">Enterprise Delivery</p>
+            <p class="text-sm font-bold text-brand-crimson uppercase tracking-wider">EdTech</p>
+            <p class="text-xs text-on-surface-variant mt-xs">Learning ecosystems that expand access and outcomes</p>
           </div>
           <div>
-            <p class="text-2xl font-bold text-brand-crimson">SOC 2</p>
-            <p class="text-xs uppercase tracking-widest text-on-surface-variant mt-xs">Aligned Practices</p>
+            <p class="text-sm font-bold text-brand-crimson uppercase tracking-wider">Cybersecurity</p>
+            <p class="text-xs text-on-surface-variant mt-xs">Awareness &amp; protection programs for digital resilience</p>
+          </div>
+          <div>
+            <p class="text-sm font-bold text-brand-crimson uppercase tracking-wider">Cloud</p>
+            <p class="text-xs text-on-surface-variant mt-xs">Cloud-native architectures modernizing operations</p>
           </div>
         </div>
       </div>
       <aside class="lg:col-span-5 relative">
         <div class="matte-card-high p-lg h-full flex flex-col justify-between bg-black/40 border border-outline-variant/40">
           <div>
-            <p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-on-surface-variant mb-md">Built By</p>
-            <p class="font-headline-md text-headline-md text-stark-white font-black tracking-tight mb-sm">BitLabs Technology PLC</p>
-            <p class="text-on-surface-variant text-sm mb-lg">
-              A software engineering studio building intelligent digital ecosystems for institutions that operate under pressure.
-            </p>
-            <div class="space-y-xs text-sm">
-              <div class="flex justify-between border-b border-outline-variant/30 py-xs">
-                <span class="text-on-surface-variant">Discipline</span>
-                <span class="text-stark-white">Software Engineering</span>
-              </div>
-              <div class="flex justify-between border-b border-outline-variant/30 py-xs">
-                <span class="text-on-surface-variant">Scale</span>
-                <span class="text-stark-white">Enterprise-grade</span>
-              </div>
-              <div class="flex justify-between border-b border-outline-variant/30 py-xs">
-                <span class="text-on-surface-variant">Sectors</span>
-                <span class="text-stark-white">Banking · Telecom · Gov</span>
-              </div>
-            </div>
+            <p class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-on-surface-variant mb-md">Why BitLabs</p>
+            <p class="font-headline-md text-headline-md text-stark-white font-black tracking-tight mb-md">Strategic innovation. Technical depth. Scalable engineering.</p>
+            <ul class="space-y-sm text-sm">
+              <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson text-[18px] mt-[2px]">insights</span><span class="text-on-surface-variant"><strong class="text-stark-white">Deep industry understanding</strong> — designed for real operational realities.</span></li>
+              <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson text-[18px] mt-[2px]">all_inclusive</span><span class="text-on-surface-variant"><strong class="text-stark-white">Full-cycle development</strong> — discovery, architecture, deployment, evolution.</span></li>
+              <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson text-[18px] mt-[2px]">trending_up</span><span class="text-on-surface-variant"><strong class="text-stark-white">Enterprise-grade scalability</strong> — systems that grow with you.</span></li>
+              <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson text-[18px] mt-[2px]">group</span><span class="text-on-surface-variant"><strong class="text-stark-white">Human-centered design</strong> — workflows that empower, not overwhelm.</span></li>
+              <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson text-[18px] mt-[2px]">handshake</span><span class="text-on-surface-variant"><strong class="text-stark-white">Long-term partnership</strong> — client success beyond initial delivery.</span></li>
+            </ul>
           </div>
           <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="mt-lg inline-flex items-center justify-between gap-sm border border-brand-crimson text-brand-crimson px-md py-sm uppercase text-label-sm tracking-widest hover:bg-brand-crimson hover:text-white transition-colors">
             <span>bitlabsbuild.com</span>
