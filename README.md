@@ -84,6 +84,21 @@ Preview the built site locally:
 npm run preview
 ```
 
+## Vercel Deployment
+
+This app is built as an SSR-enabled Vite site with separate client and server outputs. Vercel is configured using `vercel.json` and an SSR function wrapper at `api/ssr.js`.
+
+- The client assets are served from `dist/client`
+- The SSR entrypoint is loaded from `dist/server/server.js`
+- Vercel uses `npm run build` via the `vercel-build` script
+
+To deploy on Vercel:
+
+1. Push the repo to GitHub.
+2. Import the project into Vercel.
+3. Ensure the build command is `npm run vercel-build`.
+4. Confirm the output directory is `dist/client`.
+
 ## Linting and Formatting
 
 Run ESLint:
