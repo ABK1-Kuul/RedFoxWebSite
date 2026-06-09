@@ -84,7 +84,7 @@ const HTML = `
       </p>
       <ul class="space-y-sm pt-sm">
         <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson mt-[2px]">check_circle</span><span class="text-on-surface-variant"><strong class="text-stark-white">Enterprise SSO & SCIM</strong> — provision thousands of users in minutes.</span></li>
-        <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson mt-[2px]">check_circle</span><span class="text-on-surface-variant"><strong class="text-stark-white">Multi-language content</strong> — including Amharic, Swahili, Arabic, French, and English.</span></li>
+        <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson mt-[2px]">check_circle</span><span class="text-on-surface-variant"><strong class="text-stark-white">Multi-language content</strong> — including Amharic and English.</span></li>
         <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson mt-[2px]">check_circle</span><span class="text-on-surface-variant"><strong class="text-stark-white">Data residency options</strong> — regional hosting for sovereignty requirements.</span></li>
         <li class="flex gap-sm items-start"><span class="material-symbols-outlined text-brand-crimson mt-[2px]">check_circle</span><span class="text-on-surface-variant"><strong class="text-stark-white">Dedicated success engineering</strong> — not a chatbot, a named team.</span></li>
       </ul>
