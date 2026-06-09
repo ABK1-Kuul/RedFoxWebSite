@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import heroImage from "@/assets/redfox-hero.jpg";
 
 const HTML = `
 <main class="relative min-h-screen pt-24">
@@ -16,7 +17,7 @@ const HTML = `
     </div>
     <div class="mt-xl grid grid-cols-12 gap-gutter">
       <div class="col-span-12 md:col-span-8 h-[400px] overflow-hidden matte-card relative group">
-        <img alt="Enterprise security operations" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80"/>
+        <img alt="RedFox cybersecurity network defense visualization" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" src="${heroImage}"/>
         <div class="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent"></div>
         <div class="absolute bottom-md left-md">
           <p class="font-headline-lg text-headline-lg text-stark-white">One platform. Four disciplines.</p>
