@@ -14,7 +14,6 @@ This repository contains a statically rendered/reactively enhanced website with 
 - Tailwind CSS v4 with custom theme variables
 - Responsive navigation and page layouts
 - Custom error handling and SSR error normalization
-- Built with `@lovable.dev/vite-tanstack-config` for Vite + TanStack defaults
 
 ## Technology Stack
 
