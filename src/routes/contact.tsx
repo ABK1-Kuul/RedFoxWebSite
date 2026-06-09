@@ -106,8 +106,11 @@ const HTML = `
 <!-- Footer Logo Cluster -->
 <footer class="mt-xl pt-lg border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center opacity-60">
 <div class="flex items-center gap-sm mb-md md:mb-0">
+<img alt="RedFox" class="w-10 h-10 object-cover rounded" src="/logo.jpg" />
+<div>
 <span class="font-label-sm text-label-sm tracking-widest uppercase">Proprietary Technology of</span>
 <span class="font-headline-md text-title-md font-black text-white">BitLabs</span>
+</div>
 </div>
 <div class="flex gap-lg">
 <a class="text-label-sm hover:text-brand-crimson transition-colors" href="#">PRIVACY POLICY</a>

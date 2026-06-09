@@ -11,7 +11,7 @@ const links = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-const LOGO_URL = "/logo.png";
+const LOGO_URL = "/logo.jpg";
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);

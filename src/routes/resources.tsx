@@ -182,7 +182,7 @@ const HTML = `
 <footer class="px-margin-desktop py-lg bg-surface-container-lowest mt-xl">
 <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-brand-crimson" style="font-variation-settings: 'FILL' 1;">shield</span>
+<img alt="RedFox" class="w-10 h-10 object-cover rounded" src="/logo.jpg" />
 <span class="font-label-md text-label-md text-stark-white font-bold">RedFox Intelligence Hub</span>
 </div>
 <p class="text-[12px] text-muted-gray">© 2024 RedFox Cybersecurity. All assets are restricted under ISO 27001 compliance.</p>

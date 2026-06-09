@@ -224,7 +224,7 @@ const HTML = `
 <footer class="w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start gap-gutter max-w-container-max-width mx-auto bg-surface-container-lowest border-t border-outline-variant">
 <div class="space-y-6 max-w-xs">
 <div class="flex items-center gap-2">
-<img alt="RedFox" class="w-6 h-6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnwuZmTsCPJXibUoiKy_QhjTNh1zegbxHNPDLmHEko39wJx7_-4D7LFVIWkypJen7M-1zHhBFvReXZ5LxUT2TPihzdczE4ixcrRMuKTq4Ym1SwLhlGCkFc9rQCH6hwIofB01-L8Rwh5_FlICqtZUx-pMLYmBmwwi5g3M7ipaYRNp2il2WEmd3EjvkLQYnZtN7NIeG1VXqUPP1JZZ7SxUb4r27l5nxGPzoyBiNN6duzYdI0asMGu90zoCVlUOtSmS_L8tGnSE9-TQs"/>
+<img alt="RedFox" class="w-6 h-6" src="/logo.jpg"/>
 <span class="font-headline-md text-headline-md font-bold text-on-surface">RedFox</span>
 </div>
 <p class="font-body-md text-body-md text-on-surface-variant">Advanced cybersecurity awareness for the modern enterprise human layer.</p>

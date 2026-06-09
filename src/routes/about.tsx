@@ -180,9 +180,12 @@ const HTML = `
   <!-- Footer -->
   <footer class="px-margin-desktop py-xl border-t border-outline-variant/20 bg-surface-container-lowest">
     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-lg">
-      <div>
-        <p class="font-headline-md text-headline-md font-black tracking-tight text-stark-white mb-xs">RedFox</p>
-        <p class="text-on-surface-variant text-sm">© 2026 RedFox — A product of <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="text-brand-crimson hover:underline">BitLabs Technology PLC</a>.</p>
+      <div class="flex items-center gap-4 mb-4 md:mb-0">
+        <img alt="RedFox" class="w-10 h-10 object-cover rounded" src="/logo.jpg" />
+        <div>
+          <p class="font-headline-md text-headline-md font-black tracking-tight text-stark-white mb-xs">RedFox</p>
+          <p class="text-on-surface-variant text-sm">© 2026 RedFox — A product of <a href="https://bitlabsbuild.com/" target="_blank" rel="noopener noreferrer" class="text-brand-crimson hover:underline">BitLabs Technology PLC</a>.</p>
+        </div>
       </div>
       <div class="flex gap-md">
         <a class="text-on-surface-variant hover:text-brand-crimson transition-colors text-sm" href="#">Privacy Policy</a>

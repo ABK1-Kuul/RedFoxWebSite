@@ -136,7 +136,7 @@ const HTML = `
 <div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-start gap-xl">
 <div class="max-w-xs">
 <div class="flex items-center gap-xs mb-md">
-<img alt="RedFox" class="w-8 h-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnwuZmTsCPJXibUoiKy_QhjTNh1zegbxHNPDLmHEko39wJx7_-4D7LFVIWkypJen7M-1zHhBFvReXZ5LxUT2TPihzdczE4ixcrRMuKTq4Ym1SwLhlGCkFc9rQCH6hwIofB01-L8Rwh5_FlICqtZUx-pMLYmBmwwi5g3M7ipaYRNp2il2WEmd3EjvkLQYnZtN7NIeG1VXqUPP1JZZ7SxUb4r27l5nxGPzoyBiNN6duzYdI0asMGu90zoCVlUOtSmS_L8tGnSE9-TQs"/>
+<img alt="RedFox" class="w-8 h-8 object-contain" src="/logo.jpg"/>
 <span class="font-headline-md text-headline-md font-bold text-white">RedFox</span>
 </div>
 <p class="text-on-surface-variant text-sm">Securing the human element of the modern enterprise through precision engineering and tactical awareness.</p>
