@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
+import logoAsset from "@/assets/redfox-logo.jpg.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -11,8 +12,7 @@ const links = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
-const LOGO_URL =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuAnwuZmTsCPJXibUoiKy_QhjTNh1zegbxHNPDLmHEko39wJx7_-4D7LFVIWkypJen7M-1zHhBFvReXZ5LxUT2TPihzdczE4ixcrRMuKTq4Ym1SwLhlGCkFc9rQCH6hwIofB01-L8Rwh5_FlICqtZUx-pMLYmBmwwi5g3M7ipaYRNp2il2WEmd3EjvkLQYnZtN7NIeG1VXqUPP1JZZ7SxUb4r27l5nxGPzoyBiNN6duzYdI0asMGu90zoCVlUOtSmS_L8tGnSE9-TQs";
+const LOGO_URL = logoAsset.url;
 
 export function SiteNav() {
   const [open, setOpen] = useState(false);
@@ -25,8 +25,8 @@ export function SiteNav() {
     <header className="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-          <img alt="RedFox" className="w-8 h-8 object-contain" src={LOGO_URL} />
-          <span className="font-headline-md text-headline-md font-bold text-on-surface">RedFox</span>
+          <img alt="RedFox" className="w-9 h-9 object-cover rounded" src={LOGO_URL} />
+          <span className="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">RedFox</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
