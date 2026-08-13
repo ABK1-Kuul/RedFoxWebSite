@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { buildMetaTags, getSoftwareApplicationSchema, SITE_CONFIG } from "@/lib/seo";
 
 const HTML = `\`\`\`html
 
@@ -301,9 +302,20 @@ const HTML = `\`\`\`html
 \`\`\``;
 export const Route = createFileRoute("/pricing")({
   head: () => ({
-    meta: [
-      { title: "RedFox — Pricing" },
-      { name: "description", content: "RedFox cybersecurity awareness platform — pricing." },
+    meta: buildMetaTags({
+      title: "Transparent Enterprise Pricing — RedFox Cyber-Resilience Engine",
+      description:
+        "Flexible licensing tiers for enterprises of all sizes (Starter, Professional, Enterprise). Automated phishing campaigns, micro-learning, and HRI analytics.",
+      path: "/pricing",
+    }),
+    links: [
+      { rel: "canonical", href: `${SITE_CONFIG.domain}/pricing` },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: getSoftwareApplicationSchema(),
+      },
     ],
   }),
   component: Page,

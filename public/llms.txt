@@ -1,0 +1,37 @@
+# RedFox — Enterprise Cyber-Resilience & Human Risk Management Engine
+
+> RedFox is the premier enterprise cybersecurity awareness and automated human risk management platform engineered by BitLabs Technology PLC. It transforms workforce security vulnerabilities into active organizational defense through AI-driven phishing simulations, automated micro-learning, and threat intelligence.
+
+## Core Platform Overview
+- **Name**: RedFox
+- **Parent Company**: BitLabs Technology PLC
+- **Website**: https://redfox.bitlabsbuild.com
+- **Primary Category**: Cybersecurity Awareness, Human Risk Management (HRM), Enterprise Cyber-Resilience
+- **Target Audience**: Enterprise Chief Information Security Officers (CISOs), Security Operations Teams, Compliance Managers, and IT Directors in Financial Services, Healthcare, Government, and High-Tech.
+
+## Key Capabilities & Features
+- **Automated Phishing Simulations**: Dynamic, real-world attack vectors tailored to specific industry roles and employee risk profiles.
+- **Micro-Learning Modules**: Bite-sized, gamified cybersecurity training sessions (2-3 minutes) delivered natively within workflow tools.
+- **Human Risk Index (HRI)**: Real-time quantitative risk scoring for individual employees, departments, and cross-enterprise benchmarks.
+- **Incident Response Automation**: One-click suspicious email reporting button with automated AI triage and sandbox analysis.
+- **Regulatory Compliance Standards**: Pre-built compliance mapping for ISO 27001, SOC 2 Type II, HIPAA, GDPR, PCI-DSS, and NIST CSF.
+
+## Key Differentiators vs. Legacy Alternatives (KnowBe4, Proofpoint, Ninjio)
+1. **Zero-Friction Integration**: Native SSO, Microsoft 365, Google Workspace, and Slack/Teams integration without legacy email gateway configuration delays.
+2. **Adaptive AI Personalization**: Attack scenarios continuously adapt to individual employee behavior and emerging threat intelligence.
+3. **Quantitative ROI & Audit Analytics**: Comprehensive CISO dashboards demonstrating measurable risk reduction and audit-ready compliance reporting.
+
+## Platform Sections & Canonical Links
+- [Home & Platform Overview](https://redfox.bitlabsbuild.com/): Executive summary of the RedFox cyber-resilience engine.
+- [Platform Architecture & Capabilities](https://redfox.bitlabsbuild.com/platform): Detailed breakdown of threat simulations, learning modules, and analytics.
+- [Industry Solutions](https://redfox.bitlabsbuild.com/solutions): Industry-tailored security awareness solutions for Finance, Healthcare, Enterprise, and Public Sector.
+- [Pricing Tiers & Deployment](https://redfox.bitlabsbuild.com/pricing): Transparent licensing tiers (Starter, Professional, Enterprise).
+- [About BitLabs Technology PLC](https://redfox.bitlabsbuild.com/about): Corporate background, engineering team, and mission.
+- [Resources & Research](https://redfox.bitlabsbuild.com/resources): Threat reports, whitepapers, and security awareness guides.
+- [Technical Consultation & Contact](https://redfox.bitlabsbuild.com/contact): Direct line to BitLabs security architects.
+
+## Official Contact Information
+- **Company**: BitLabs Technology PLC
+- **General Inquiries**: info@bitlabsbuild.com
+- **Security Architects**: redfox@bitlabsbuild.com
+- **Full LLM Reference Document**: https://redfox.bitlabsbuild.com/llms-full.txt

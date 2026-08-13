@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { buildMetaTags, getOrganizationSchema, SITE_CONFIG } from "@/lib/seo";
 import heroImage from "@/assets/redfox-hero.jpg";
 
 const HTML = `
@@ -199,9 +200,20 @@ const HTML = `
 
 export const Route = createFileRoute("/about")({
   head: () => ({
-    meta: [
-      { title: "RedFox — About | Cybersecurity Awareness Platform by BitLabs" },
-      { name: "description", content: "RedFox is an enterprise cybersecurity awareness platform offering continuous training, phishing simulations, behavioral analytics, and compliance reporting — engineered by BitLabs Technology PLC." },
+    meta: buildMetaTags({
+      title: "About BitLabs & RedFox — Advancing Digital Sovereignty",
+      description:
+        "RedFox is an enterprise cybersecurity awareness engine engineered by BitLabs Technology PLC. Continuous training, phishing simulations, and human risk management.",
+      path: "/about",
+    }),
+    links: [
+      { rel: "canonical", href: `${SITE_CONFIG.domain}/about` },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: getOrganizationSchema(),
+      },
     ],
   }),
   component: Page,

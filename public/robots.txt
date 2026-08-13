@@ -1,0 +1,33 @@
+# Robots.txt for RedFox Cybersecurity Platform (BitLabs Technology PLC)
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# AI Crawlers & LLM Search Engine Bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Sitemap & LLM Specification Locations
+Sitemap: https://redfox.bitlabsbuild.com/sitemap.xml
+LLMs-txt: https://redfox.bitlabsbuild.com/llms.txt

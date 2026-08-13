@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { buildMetaTags, SITE_CONFIG } from "@/lib/seo";
 
 const HTML = `
 <main class="w-full bg-background pt-24">
@@ -208,9 +209,14 @@ const HTML = `
 `;
 export const Route = createFileRoute("/resources")({
   head: () => ({
-    meta: [
-      { title: "RedFox — Resources" },
-      { name: "description", content: "RedFox cybersecurity awareness platform — resources." },
+    meta: buildMetaTags({
+      title: "Cybersecurity Awareness Research & Resources — RedFox",
+      description:
+        "Threat intelligence whitepapers, human risk benchmarks, phishing simulation playbooks, and cybersecurity awareness guides by RedFox security architects.",
+      path: "/resources",
+    }),
+    links: [
+      { rel: "canonical", href: `${SITE_CONFIG.domain}/resources` },
     ],
   }),
   component: Page,

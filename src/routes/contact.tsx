@@ -3,16 +3,18 @@ import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { SiteNav } from "@/components/SiteNav";
 import { sendContactEmail, type ContactFormData } from "@/lib/contact-server";
+import { buildMetaTags, SITE_CONFIG } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
-    meta: [
-      { title: "RedFox — Contact & Consultation" },
-      {
-        name: "description",
-        content:
-          "Connect with RedFox elite security architects and schedule a technical consultation.",
-      },
+    meta: buildMetaTags({
+      title: "Contact & Technical Consultation — RedFox Security Architects",
+      description:
+        "Connect directly with RedFox security analysts at BitLabs Technology PLC. Schedule a technical consultation to map your organization's threat landscape.",
+      path: "/contact",
+    }),
+    links: [
+      { rel: "canonical", href: `${SITE_CONFIG.domain}/contact` },
     ],
   }),
   component: ContactPage,

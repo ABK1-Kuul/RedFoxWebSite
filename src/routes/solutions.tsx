@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { buildMetaTags, SITE_CONFIG } from "@/lib/seo";
 
 const HTML = `
 <!-- Main Content Canvas -->
@@ -223,9 +224,14 @@ const HTML = `
 `;
 export const Route = createFileRoute("/solutions")({
   head: () => ({
-    meta: [
-      { title: "RedFox — Solutions" },
-      { name: "description", content: "RedFox cybersecurity awareness platform — solutions." },
+    meta: buildMetaTags({
+      title: "Industry Cybersecurity Solutions — RedFox by BitLabs",
+      description:
+        "Tailored human risk resilience solutions for Finance, Healthcare, Enterprise, and Public Sector organizations. Compliance automation and custom attack scenarios.",
+      path: "/solutions",
+    }),
+    links: [
+      { rel: "canonical", href: `${SITE_CONFIG.domain}/solutions` },
     ],
   }),
   component: Page,

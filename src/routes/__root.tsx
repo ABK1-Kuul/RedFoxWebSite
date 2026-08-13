@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { buildMetaTags, getOrganizationSchema, SITE_CONFIG } from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -74,23 +75,32 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "RedFox | Cybersecurity Awareness Platform" },
-      { name: "description", content: "RedFox — secure the human layer with vigilant awareness." },
-    ],
+    meta: buildMetaTags({
+      title: SITE_CONFIG.defaultTitle,
+      description: SITE_CONFIG.defaultDescription,
+    }),
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/jpeg", href: "/logo.jpg" },
       { rel: "apple-touch-icon", href: "/logo.jpg" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" },
+      { rel: "canonical", href: SITE_CONFIG.domain },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap",
+      },
       { rel: "stylesheet", href: "/redfox-styles.css" },
     ],
     scripts: [
       { src: "https://cdn.tailwindcss.com?plugins=forms,container-queries" },
       { src: "/tailwind-config.js" },
+      {
+        type: "application/ld+json",
+        children: getOrganizationSchema(),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -98,7 +108,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
-
 
 function RootShell({ children }: { children: ReactNode }) {
   return (

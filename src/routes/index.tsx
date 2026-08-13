@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { buildMetaTags, getSoftwareApplicationSchema, getFAQSchema, SITE_CONFIG } from "@/lib/seo";
 
 const HTML = `
 <!-- Header Navigation -->
@@ -284,9 +285,41 @@ const HTML = `
 `;
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "RedFox — Home" },
-      { name: "description", content: "RedFox cybersecurity awareness platform — home." },
+    meta: buildMetaTags({
+      title: "RedFox — Enterprise Cyber-Resilience & Human Risk Management Engine",
+      description:
+        "Transform workforce vulnerabilities into defense with RedFox by BitLabs Technology PLC. Automated phishing simulations, adaptive micro-learning, and human risk analytics.",
+      path: "/",
+    }),
+    links: [
+      { rel: "canonical", href: SITE_CONFIG.domain },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: getSoftwareApplicationSchema(),
+      },
+      {
+        type: "application/ld+json",
+        children: getFAQSchema([
+          {
+            question: "What is RedFox and how does it secure the human layer?",
+            answer:
+              "RedFox is an enterprise cyber-resilience engine engineered by BitLabs Technology PLC. It automates phishing simulations, micro-learning, and human risk scoring to transform employee vulnerability into active defense.",
+          },
+          {
+            question:
+              "How does RedFox compare to legacy security awareness platforms like KnowBe4?",
+            answer:
+              "Unlike legacy platforms requiring lengthy deployment and manual campaign management, RedFox features zero-friction API integration, adaptive AI threat personalization, real-time Human Risk Index (HRI) analytics, and 2-3 minute workflow-native micro-learning.",
+          },
+          {
+            question: "Which compliance standards does RedFox support?",
+            answer:
+              "RedFox provides automated compliance mapping and audit-ready reports for ISO 27001, SOC 2 Type II, HIPAA, GDPR, PCI-DSS, and NIST CSF.",
+          },
+        ]),
+      },
     ],
   }),
   component: Page,

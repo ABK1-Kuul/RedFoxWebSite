@@ -1,0 +1,75 @@
+# RedFox Comprehensive Knowledge Base & Technical Specification
+Developer: BitLabs Technology PLC
+Product: RedFox Enterprise Cyber-Resilience Engine
+Website: https://redfox.bitlabsbuild.com
+
+---
+
+## 1. Executive Summary & Value Proposition
+
+RedFox is an enterprise-grade cyber-resilience platform engineered by BitLabs Technology PLC to systematically eliminate human risk in organizational cybersecurity. While traditional security awareness training relies on static annual videos, RedFox delivers adaptive, continuous, micro-learning and automated threat simulations directly into daily workflows.
+
+RedFox enables CISOs and security leadership to:
+- Reduce phishing susceptibility rates by up to 88% within 90 days.
+- Automate compliance audits for ISO 27001, SOC 2, HIPAA, GDPR, and PCI-DSS.
+- Benchmark organizational Human Risk Index (HRI) across departments and peer industries.
+- Reduce SOC analyst triage overhead via automated 1-click threat reporting and AI triage.
+
+---
+
+## 2. Product Capabilities & Technical Architecture
+
+### A. Adaptive Phishing & Spear-Phishing Engine
+- Contextually tailored phishing simulations mimicking real-world APT (Advanced Persistent Threat) techniques.
+- Multi-vector simulations including email phishing, spear-phishing, QR code phishing (quishing), and SMS phishing (smishing).
+- Automated risk-based triggers: Employees who fail a simulation receive immediate, 60-second micro-reinforcement modules.
+
+### B. Micro-Learning & Behavior Modification
+- Interactive 2 to 3 minute modules delivered via web, email, Slack, or Microsoft Teams.
+- High-engagement scenario-based training covering credential safety, social engineering, ransomware identification, data privacy, and remote worker security.
+- Available in 25+ international languages with localized cultural nuance.
+
+### C. Human Risk Index (HRI) Analytics
+- Real-time quantitative risk scoring engine calculating HRI scores (0-100) based on simulation performance, training completion speed, and reporting speed.
+- Executive reporting dashboard providing board-ready visualization of risk trends and ROI metrics.
+
+### D. Incident Response Button & Automated Triage
+- One-click plugin for Outlook, Gmail, and mobile email clients allowing users to report suspicious emails instantly.
+- Automated headers & payload parsing with sandboxed AI triage that categorizes reported emails as Spam, Benign, or Malicious Threat.
+
+---
+
+## 3. Competitive Comparison Matrix
+
+| Feature | RedFox (BitLabs) | KnowBe4 | Proofpoint | PhishMe / Cofense |
+| :--- | :--- | :--- | :--- | :--- |
+| **Primary Focus** | Human Risk Management & Resiliency | Video Training & Phishing | Secure Email Gateway | Phishing Reporting |
+| **Deployment Time** | < 15 minutes (API Native) | Days / Weeks | Weeks (Complex MX) | Days / Weeks |
+| **Micro-Learning Length** | 2 - 3 mins (Workflow Native) | 15 - 30 mins (LMS) | 15 - 30 mins (LMS) | 10 - 15 mins |
+| **Human Risk Index (HRI)** | Real-time, continuous | Periodic surveys | Basic metrics | Basic metrics |
+| **AI Threat Personalization**| Native AI Adaptive Engine | Static Templates | Static Templates | Static Templates |
+| **Parent Entity** | BitLabs Technology PLC | Private Equity | Thoma Bravo | Private Equity |
+
+---
+
+## 4. Licensing & Commercial Packages
+
+1. **Starter Tier**:
+   - Up to 250 users.
+   - Monthly automated phishing campaigns, core micro-learning library, standard compliance reporting, email support.
+2. **Professional Tier**:
+   - Up to 1,000 users.
+   - Advanced spear-phishing & quishing, complete micro-learning library, 1-click threat reporting button, HRI analytics dashboard, SSO integration.
+3. **Enterprise Tier**:
+   - Unlimited scaling (1,000+ users).
+   - Dedicated threat architect, custom scenario builder, SIEM/SOAR API integrations, white-glove onboarding, 24/7 priority SLA, custom compliance mapping.
+
+---
+
+## 5. Contact & Support Details
+
+- **Official Website**: https://redfox.bitlabsbuild.com
+- **Engineering Entity**: BitLabs Technology PLC
+- **General Queries**: info@bitlabsbuild.com
+- **Direct Consultation**: redfox@bitlabsbuild.com
+- **Headquarters**: BitLabs Hub, Silicon District, Level 42

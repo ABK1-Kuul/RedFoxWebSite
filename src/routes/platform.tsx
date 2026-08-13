@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
+import { buildMetaTags, getSoftwareApplicationSchema, SITE_CONFIG } from "@/lib/seo";
 
 const HTML = `
 <!-- Main Content Canvas -->
@@ -223,9 +224,20 @@ const HTML = `
 `;
 export const Route = createFileRoute("/platform")({
   head: () => ({
-    meta: [
-      { title: "RedFox — Platform" },
-      { name: "description", content: "RedFox cybersecurity awareness platform — platform." },
+    meta: buildMetaTags({
+      title: "Platform Architecture — RedFox Human Risk Management Engine",
+      description:
+        "Explore RedFox platform capabilities: automated threat simulations, workflow-native micro-learning, real-time Human Risk Index (HRI), and AI threat triage.",
+      path: "/platform",
+    }),
+    links: [
+      { rel: "canonical", href: `${SITE_CONFIG.domain}/platform` },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: getSoftwareApplicationSchema(),
+      },
     ],
   }),
   component: Page,
