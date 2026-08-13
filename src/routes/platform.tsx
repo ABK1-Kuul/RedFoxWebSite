@@ -55,14 +55,40 @@ const HTML = `
 </li>
 </ul>
 </div>
-<div class="matte-card p-xs rounded-xl overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-<img alt="Shield Academy Training Hub Dashboard" class="w-full rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuqqXs288cv3AlDFADdGw3am6e_n2d2WoCT0vLZ-OLu0OAQrqDcqc_yYZNUoWdbPAm9TiUhuTXgNJkd5frKhaKzG64164USu9eXxEmA1czc7WecBL6f0Uqyk86mKmRWJYLNbp1sKTJbVUNixIW09LTe7A3DhDJY2Cl7nAeEJybA1zVauAJdCV3MvyYcXmDIh-pjLPb-nBqZTYZDlGwr_tAb2EHLpouIY5_YQfeek4MkJx4_FBcwpKyaJo8"/>
+<div class="matte-card p-6 rounded-xl border border-outline-variant/30 bg-surface-container-low/80 space-y-4">
+  <div class="flex justify-between items-center border-b border-outline-variant/20 pb-3">
+    <span class="text-xs font-mono text-brand-crimson font-bold">MODULE 04: CREDENTIAL SAFETY</span>
+    <span class="text-xs text-green-400 font-mono">98% PASS RATE</span>
+  </div>
+  <div class="space-y-3 font-mono text-xs">
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20 flex justify-between items-center">
+      <span class="text-white font-medium">Spotting Spoofed Login Domains</span>
+      <span class="text-brand-crimson font-bold">+150 XP</span>
+    </div>
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20 flex justify-between items-center">
+      <span class="text-white font-medium">Multi-Factor Auth Bypass Prevention</span>
+      <span class="text-brand-crimson font-bold">+200 XP</span>
+    </div>
+  </div>
 </div>
 </div>
 <!-- Feature 02: Phishing Manager -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center py-xl matte-border-b">
-<div class="order-2 lg:order-1 matte-card p-xs rounded-xl overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-<img alt="Phishing Simulation Manager Campaign Builder" class="w-full rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvFe8M2w7gfM9iYyY-PEfIenH7Nqt79Sjj80CR93tnjJj8IbW07Lfj_PfXOdHUaljmXZXX6yzO0NmsP-5tpdqmt3lQGc3X5tMhhEULh91K06YegnN6MlEi_JGICe7qzwL34sapH7UFU6IRE8_5Qn6EibwAyj-ZbAedXKMv4GFWDMCTXVM4I2tFCaq5XOMr6Ztc_MuB_116Im3goyHYF29Rp66t_6IBgCBNR9rk7gcrYGWq5SH4Z6lAgY28"/>
+<div class="order-2 lg:order-1 matte-card p-6 rounded-xl border border-outline-variant/30 bg-surface-container-low/80 space-y-4">
+  <div class="flex justify-between items-center border-b border-outline-variant/20 pb-3">
+    <span class="text-xs font-mono text-white font-bold">SIMULATION TELEMETRY</span>
+    <span class="text-xs text-brand-crimson font-mono font-bold">ACTIVE DRILL</span>
+  </div>
+  <div class="grid grid-cols-2 gap-3 text-center">
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20">
+      <div class="text-2xl font-extrabold text-white">0.3s</div>
+      <div class="text-[10px] text-on-surface-variant uppercase mt-1">Detection Delay</div>
+    </div>
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20">
+      <div class="text-2xl font-extrabold text-green-400">92.4%</div>
+      <div class="text-[10px] text-on-surface-variant uppercase mt-1">User Report Rate</div>
+    </div>
+  </div>
 </div>
 <div class="order-1 lg:order-2">
 <span class="text-brand-crimson/40 font-black text-6xl opacity-20 block mb-sm">02</span>
@@ -99,8 +125,25 @@ const HTML = `
 <span class="text-xs text-on-surface-variant italic">Audited by 40+ Certified Partners</span>
 </div>
 </div>
-<div class="matte-card p-xs rounded-xl overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-<img alt="Audit Trail Vault Security Event Log" class="w-full rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvly2S2Joh9I0BDZq_yf5XcNR2jnh2WOLxwTBio_Igrb9o7ZfT51yVQoXXmNIOtDIrXBYQiGBNg39leq4G-UHHfH9vJRXPPNTepUAj02cUbUY6bb1GA1O7Xaa2zqSky0M1NN68UsN0BBttYpDnWLTUianfneIN1CErrk7vF15FzYp7hfLOaB1pjcofmVH-LvBsBAe6joNuICG-7eLCGKy00zp481jSRf6nTKGs9-J1LYSzmzEPYfd0GPWw"/>
+<div class="matte-card p-6 rounded-xl border border-outline-variant/30 bg-surface-container-low/80 space-y-4">
+  <div class="flex justify-between items-center border-b border-outline-variant/20 pb-3">
+    <span class="text-xs font-mono text-white font-bold">AUDIT READY COMPLIANCE</span>
+    <span class="text-xs text-green-400 font-mono font-bold">100% VERIFIED</span>
+  </div>
+  <div class="space-y-2 text-xs font-mono">
+    <div class="flex justify-between items-center text-on-surface-variant p-2 bg-surface-container-high/50 rounded">
+      <span>ISO 27001 ISMS Control A.7.2</span>
+      <span class="text-green-400 font-bold">PASSED</span>
+    </div>
+    <div class="flex justify-between items-center text-on-surface-variant p-2 bg-surface-container-high/50 rounded">
+      <span>SOC 2 Type II CC6.1 Security</span>
+      <span class="text-green-400 font-bold">PASSED</span>
+    </div>
+    <div class="flex justify-between items-center text-on-surface-variant p-2 bg-surface-container-high/50 rounded">
+      <span>HIPAA Privacy & Awareness § 164.308</span>
+      <span class="text-green-400 font-bold">PASSED</span>
+    </div>
+  </div>
 </div>
 </div>
 </section>

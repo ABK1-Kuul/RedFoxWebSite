@@ -17,12 +17,33 @@ const HTML = `
       </p>
     </div>
     <div class="mt-xl grid grid-cols-12 gap-gutter">
-      <div class="col-span-12 md:col-span-8 h-[400px] overflow-hidden matte-card relative group">
-        <img alt="RedFox cybersecurity network defense visualization" class="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-700" src="${heroImage}"/>
-        <div class="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent"></div>
-        <div class="absolute bottom-md left-md">
-          <p class="font-headline-lg text-headline-lg text-stark-white">One platform. Four disciplines.</p>
-          <p class="text-on-surface-variant">Training · Simulation · Analytics · Compliance</p>
+      <div class="col-span-12 md:col-span-8 min-h-[400px] matte-card p-lg relative group flex flex-col justify-between overflow-hidden border border-outline-variant/30 bg-surface-container-low/60">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-crimson/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-md mb-lg">
+          <div class="bg-surface-container-high/60 p-sm rounded border border-outline-variant/30">
+            <span class="text-brand-crimson text-xs font-bold block uppercase tracking-widest mb-1">TRAINING</span>
+            <div class="text-2xl font-bold text-white mb-1">Adaptive</div>
+            <p class="text-[11px] text-on-surface-variant">2-min workflow modules</p>
+          </div>
+          <div class="bg-surface-container-high/60 p-sm rounded border border-outline-variant/30">
+            <span class="text-brand-crimson text-xs font-bold block uppercase tracking-widest mb-1">SIMULATION</span>
+            <div class="text-2xl font-bold text-white mb-1">Automated</div>
+            <p class="text-[11px] text-on-surface-variant">Spear-phishing & quishing</p>
+          </div>
+          <div class="bg-surface-container-high/60 p-sm rounded border border-outline-variant/30">
+            <span class="text-brand-crimson text-xs font-bold block uppercase tracking-widest mb-1">ANALYTICS</span>
+            <div class="text-2xl font-bold text-white mb-1">Real-time</div>
+            <p class="text-[11px] text-on-surface-variant">Human Risk Index (HRI)</p>
+          </div>
+          <div class="bg-surface-container-high/60 p-sm rounded border border-outline-variant/30">
+            <span class="text-brand-crimson text-xs font-bold block uppercase tracking-widest mb-1">COMPLIANCE</span>
+            <div class="text-2xl font-bold text-white mb-1">Immutable</div>
+            <p class="text-[11px] text-on-surface-variant">ISO 27001 & SOC 2 audit</p>
+          </div>
+        </div>
+        <div class="relative z-10 pt-md border-t border-outline-variant/30">
+          <p class="font-headline-lg text-headline-lg text-white font-bold mb-1">One Unified Platform. Four Core Disciplines.</p>
+          <p class="text-on-surface-variant font-medium">Enterprise cyber-resilience engineered for high-security environments.</p>
         </div>
       </div>
       <div class="col-span-12 md:col-span-4 flex flex-col justify-between p-md matte-card">

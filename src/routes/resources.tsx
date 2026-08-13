@@ -24,8 +24,10 @@ const HTML = `
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-xl">
 <!-- Featured Case Study -->
 <div class="md:col-span-8 group relative overflow-hidden rounded-xl matte-card inner-glow flex flex-col md:flex-row">
-<div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
-<img alt="Data Center" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsGNrJEUm7bWAo_eu2HWgWROivlaxSAgOE0n-K_k2lN5BcP6kIC9eRFTEwQq8aduFO3G4HFJVFEYBdfa0Mb6bk1BgIZD7LVePsuRlLlmg40QVV0ytJqQJ-10IYGUPNCWWpBLCJ81JuAqvyNS1o_K9WC3Vr6tg0OMtxT8Me8aSbmeda7DdifCh4LXvvL1q6kn3cf5YGtFKnHE5OR5a0qyl2l31dRuXJEeBVNvqQ-95WY9hKsR9qJwehBKMk"/>
+<div class="md:w-1/2 p-6 flex flex-col justify-center bg-surface-container-high/40 border-r border-outline-variant/20">
+  <span class="text-brand-crimson font-mono text-xs font-bold uppercase tracking-widest mb-2">RESEARCH PAPERS & REPORTS</span>
+  <div class="text-3xl font-extrabold text-white mb-2">88%</div>
+  <p class="text-xs text-on-surface-variant font-mono">Workforce Phishing Risk Reduction in 90 Days</p>
 </div>
 <div class="md:w-1/2 p-lg flex flex-col justify-center">
 <div class="flex items-center gap-2 text-brand-crimson mb-xs">
@@ -63,9 +65,9 @@ const HTML = `
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Whitepaper 1 -->
 <div class="matte-card inner-glow flex flex-col group h-full">
-<div class="h-48 relative overflow-hidden">
-<img alt="Networking" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuTJ5CfuREIuZh5mxkdU8YWst8Bcca24UiOjdhsOwqnSWGi0XQt4krX6r6ZxPIVNIrj1S4b-ysDw6YjFmEGTFCQM8Y6BPSGzaNBnVx9T-3fs3cacf9WPoOR8DbXcdLb353F8cGpu1g3Y1g5Yvxz60BhuvZicyv98BYtAjkN3MYxxlRj6Q-PwAcl5WXoUB13zi6BLEQUua8jiP3ZcNBX6mtDxH6cKKwog2bL1nOornb6dWVOpk3vKAzBlBQ"/>
-<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-stark-white font-bold border border-white/10">WHITEPAPER</div>
+<div class="h-28 bg-surface-container-high/60 border-b border-outline-variant/20 p-4 flex items-center justify-between">
+  <span class="material-symbols-outlined text-brand-crimson text-3xl">lock</span>
+  <span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-brand-crimson/10 border border-brand-crimson/30 px-2 py-1 rounded">WHITEPAPER</span>
 </div>
 <div class="p-md flex flex-col flex-1">
 <h4 class="font-title-md text-title-md text-stark-white mb-xs group-hover:text-brand-crimson transition-colors">Quantum-Resistant Encryption Standards</h4>
@@ -81,9 +83,9 @@ const HTML = `
 </div>
 <!-- Blog 1 -->
 <div class="matte-card inner-glow flex flex-col group h-full">
-<div class="h-48 relative overflow-hidden">
-<img alt="Code Review" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLuy_puuVYmgbQV-kHyrqX6icKd9WIvddeZfRpCgsrP5GnwD_qE3Heb5G5MkLMt-8jC0tg_kGsEAF6t0ZWI8-efSr5JdabfFekLDNfWk_CWA7EyrHtNnE-6EpQmzuT863xcDFeIj5VRI3sLBAE5WT4n3fM-8BAgEVrfuHnVPGmrPqUIxLQ-ojXxmUuomdK-0ObMuHk1MZTgtN_LGNUUE6DQtbzMv6a0I-qFCkQkOBbL3osX1orE3Q_7VIWc"/>
-<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-stark-white font-bold border border-white/10">BLOG</div>
+<div class="h-28 bg-surface-container-high/60 border-b border-outline-variant/20 p-4 flex items-center justify-between">
+  <span class="material-symbols-outlined text-brand-crimson text-3xl">shield</span>
+  <span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-brand-crimson/10 border border-brand-crimson/30 px-2 py-1 rounded">BLOG</span>
 </div>
 <div class="p-md flex flex-col flex-1">
 <h4 class="font-title-md text-title-md text-stark-white mb-xs group-hover:text-brand-crimson transition-colors">Zero-Trust: Beyond the Marketing Hype</h4>
@@ -99,9 +101,9 @@ const HTML = `
 </div>
 <!-- Case Study 2 -->
 <div class="matte-card inner-glow flex flex-col group h-full">
-<div class="h-48 relative overflow-hidden">
-<img alt="Smart City" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvGuelcfinKiXjZx6c7xzPdthJpcXSxicvsD5o2JYZL4FbtZjF_E82cwPD-kZIT2wRHuodcMbvdMLiFeU24jerzv-QAQbW99gDaLYhNuvzgfqIJgaW_plHM66_p1L21vuKQnrgH2c9Xes-iOMWwkVra1YlczriZbQKqsHNyJmkK5g-Mu-lUJjalreAP4zdl4OMmWoGaFK5kdG1Ms8HRspfk0fP2q94kBzkmvseKSlTUfaOrNTnos5t-YEk"/>
-<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-stark-white font-bold border border-white/10">CASE STUDY</div>
+<div class="h-28 bg-surface-container-high/60 border-b border-outline-variant/20 p-4 flex items-center justify-between">
+  <span class="material-symbols-outlined text-brand-crimson text-3xl">precision_manufacturing</span>
+  <span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-brand-crimson/10 border border-brand-crimson/30 px-2 py-1 rounded">CASE STUDY</span>
 </div>
 <div class="p-md flex flex-col flex-1">
 <h4 class="font-title-md text-title-md text-stark-white mb-xs group-hover:text-brand-crimson transition-colors">Securing IoT in Smart Manufacturing</h4>
@@ -117,9 +119,9 @@ const HTML = `
 </div>
 <!-- Whitepaper 2 -->
 <div class="matte-card inner-glow flex flex-col group h-full">
-<div class="h-48 relative overflow-hidden">
-<img alt="Shield Layers" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsJjSy4CJ35yB2VBT3xnUUot4E9NnOaP58sEJ7QH8DOipnXtzVg4o6ZF3YM18wTD8NfCc_wWCD2ETB-tXMdC5Lsiw2oRMNE1CphPS8yEbt9NTCjhoCP4yLWDEHp24i-hl5YzLZyghXz-KdFoQnZva_-cM1zeDSPPZaYm7K_ObdnpznHMjjvpfbSNQ7l_yRKW75cGxoncovfDJATub948-3bLyU-S5yBEToNpydT09-BFERP14n1nybRRA"/>
-<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-stark-white font-bold border border-white/10">WHITEPAPER</div>
+<div class="h-28 bg-surface-container-high/60 border-b border-outline-variant/20 p-4 flex items-center justify-between">
+  <span class="material-symbols-outlined text-brand-crimson text-3xl">analytics</span>
+  <span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-brand-crimson/10 border border-brand-crimson/30 px-2 py-1 rounded">WHITEPAPER</span>
 </div>
 <div class="p-md flex flex-col flex-1">
 <h4 class="font-title-md text-title-md text-stark-white mb-xs group-hover:text-brand-crimson transition-colors">The 2024 State of Malware Analysis</h4>
@@ -135,9 +137,9 @@ const HTML = `
 </div>
 <!-- Blog 2 -->
 <div class="matte-card inner-glow flex flex-col group h-full">
-<div class="h-48 relative overflow-hidden">
-<img alt="Hardware" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLvvrwSFHHIAdzBZ3qz3P88hMszYrZpbVfvCpviZPkCL5ybvwTYWLRpOC3B2k2X2XGk5lIHxXRlyrBnRWUsQQnqjvWpY1p2iyY1dyQ4bV_xvaJfBkDPLZ96DT6IP7WyKvk2And6j0Nzrv9w6fkHt0zpqOjG4nsSfNlXkztnhjnrsCoFHOBImkP4sJBtUiIIzNE5uxY2GM5svgYKzagEz_JtLJZqyPnGdA2iGgVscF7o5WiQBrJJ_K0GHNA"/>
-<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-2 py-1 rounded text-[10px] text-stark-white font-bold border border-white/10">BLOG</div>
+<div class="h-28 bg-surface-container-high/60 border-b border-outline-variant/20 p-4 flex items-center justify-between">
+  <span class="material-symbols-outlined text-brand-crimson text-3xl">psychology</span>
+  <span class="text-xs font-mono font-bold text-white uppercase tracking-wider bg-brand-crimson/10 border border-brand-crimson/30 px-2 py-1 rounded">BLOG</span>
 </div>
 <div class="p-md flex flex-col flex-1">
 <h4 class="font-title-md text-title-md text-stark-white mb-xs group-hover:text-brand-crimson transition-colors">Psychology of the Phish</h4>

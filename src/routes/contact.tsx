@@ -142,17 +142,23 @@ function ContactPage() {
               </div>
             </section>
 
-            <div className="aspect-video rounded overflow-hidden matte-card group relative">
-              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all z-10"></div>
-              <img
-                alt="Corporate architectural building reflecting BitLabs stability"
-                className="w-full h-full object-cover grayscale opacity-60 group-hover:opacity-100 transition-opacity duration-700"
-                src="https://lh3.googleusercontent.com/aida/AP1WRLug05c1zittp0-BcKV5kbRMEknOCtENAaG7Du23CC35yiC0VUwVfjwi10i-1YmxVSNMryLNtAZt8Fxp8DWL5XaLIBQ-AR8LaPpsimRsEzktOmyCnVcZBKevB4IXq9nqxf2Wyw1mZ8qHhVfPlBj003JRf68Bj8bH3KNIFOshdW0_Go-BqpxP5d9G4ubdQ3x8TVY4z_t9Vl-tnly0wxsCeKTbhzz6t3RV1_e3UUYD6l3kKtELhlBFNlNmAxY"
-              />
-              <div className="absolute bottom-md left-md z-20">
-                <p className="font-headline-lg text-headline-lg text-white font-bold tracking-tight">
-                  Vigilant Resilience.
-                </p>
+            <div className="aspect-video rounded overflow-hidden matte-card p-md relative group flex flex-col justify-between border border-outline-variant/30 bg-surface-container-low/80">
+              <div className="flex items-center justify-between z-20">
+                <span className="bg-brand-crimson/10 border border-brand-crimson/30 text-brand-crimson text-xs px-2.5 py-1 rounded font-bold uppercase tracking-wider">
+                  SECURITY OPERATIONS CENTER
+                </span>
+                <span className="flex items-center gap-1.5 text-xs text-green-400 font-medium">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                  Analyst Response Active
+                </span>
+              </div>
+              <div className="z-20 my-4">
+                <p className="text-2xl font-bold text-white tracking-tight mb-1">Vigilant Resilience.</p>
+                <p className="text-xs text-on-surface-variant">Direct line to BitLabs senior threat analysts & security architects.</p>
+              </div>
+              <div className="flex items-center justify-between text-xs text-on-surface-variant border-t border-outline-variant/20 pt-3 z-20">
+                <span>Avg Response: &lt; 2 Hours</span>
+                <span className="text-white font-bold">24/7 Enterprise SLA</span>
               </div>
             </div>
           </div>

@@ -1,305 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { buildMetaTags, getSoftwareApplicationSchema, SITE_CONFIG } from "@/lib/seo";
 
-const HTML = `\`\`\`html
-
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "tertiary-fixed": "#e4e2e1",
-                        "primary-fixed": "#e2e2e2",
-                        "on-surface": "#e5e2e1",
-                        "tertiary": "#ffffff",
-                        "surface-container-low": "#1c1b1b",
-                        "surface-container": "#201f1f",
-                        "on-background": "#e5e2e1",
-                        "tertiary-container": "#e4e2e1",
-                        "on-tertiary": "#303030",
-                        "on-primary-container": "#636565",
-                        "surface-container-highest": "#353534",
-                        "on-primary-fixed": "#1a1c1c",
-                        "secondary-fixed-dim": "#c7c6c6",
-                        "on-primary": "#2f3131",
-                        "primary": "#ffffff",
-                        "on-secondary-fixed-variant": "#464747",
-                        "error-container": "#93000a",
-                        "on-tertiary-container": "#656464",
-                        "on-secondary-fixed": "#1a1c1c",
-                        "on-error-container": "#ffdad6",
-                        "background": "#131313",
-                        "surface-container-lowest": "#0e0e0e",
-                        "inverse-on-surface": "#313030",
-                        "surface-bright": "#393939",
-                        "on-secondary-container": "#b8b8b8",
-                        "on-tertiary-fixed-variant": "#474747",
-                        "surface-tint": "#c6c6c7",
-                        "inverse-surface": "#e5e2e1",
-                        "error": "#ffb4ab",
-                        "surface": "#131313",
-                        "surface-container-high": "#2a2a2a",
-                        "outline-variant": "#444748",
-                        "on-tertiary-fixed": "#1b1c1c",
-                        "secondary-fixed": "#e3e2e2",
-                        "on-secondary": "#2f3131",
-                        "on-primary-fixed-variant": "#454747",
-                        "secondary": "#c7c6c6",
-                        "on-surface-variant": "#c4c7c8",
-                        "tertiary-fixed-dim": "#c8c6c6",
-                        "inverse-primary": "#5d5f5f",
-                        "surface-dim": "#131313",
-                        "on-error": "#690005",
-                        "surface-variant": "#353534",
-                        "secondary-container": "#484949",
-                        "outline": "#8e9192",
-                        "primary-fixed-dim": "#c6c6c7",
-                        "primary-container": "#e2e2e2",
-                        "stark-white": "#F2F2F2",
-                        "muted-gray": "#8e9192",
-                        "surface-slate": "#1c1b1b",
-                        "brand-crimson": "#d72638"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "lg": "2.5rem",
-                        "unit": "4px",
-                        "sm": "1rem",
-                        "margin-desktop": "64px",
-                        "gutter": "24px",
-                        "xs": "0.5rem",
-                        "md": "1.5rem",
-                        "margin-mobile": "20px",
-                        "xl": "4rem",
-                        "container-max-width": "1440px"
-                    },
-                    "fontFamily": {
-                        "headline-lg": ["Sora"],
-                        "title-md": ["Sora"],
-                        "label-sm": ["Sora"],
-                        "display-lg": ["Sora"],
-                        "body-lg": ["Sora"],
-                        "headline-lg-mobile": ["Sora"],
-                        "body-md": ["Sora"],
-                        "label-md": ["Sora"]
-                    },
-                    "fontSize": {
-                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "500"}],
-                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "500"}],
-                        "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
-                        "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "300"}],
-                        "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                        "body-md": ["14px", {"lineHeight": "1.6", "fontWeight": "300"}],
-                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        .matte-card {
-            background-color: #1c1b1b;
-            border: 1px solid #353534;
-        }
-        .glow-hover:hover {
-            border-color: #d72638;
-            transition: border-color 0.3s ease;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #131313; }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
-        .matte-grid {
-            background-image: 
-                linear-gradient(rgba(229, 226, 225, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(229, 226, 225, 0.03) 1px, transparent 1px);
-            background-size: 48px 48px;
-        }
-    </style>
-<main class="min-h-screen w-full pt-32 pb-xl">
-<!-- Header Section -->
-<section class="max-w-5xl mx-auto mb-xl text-center px-margin-mobile">
-<span class="font-label-sm text-label-sm text-brand-crimson tracking-widest uppercase mb-sm inline-block">Transparent Models</span>
-<h2 class="font-display-lg text-display-lg text-primary mb-md">Cybersecurity Scaled to Your Ambition</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
-                No hidden fees. No complicated modules. Just powerful, automated resilience for teams that refuse to compromise.
-            </p>
-</section>
-<!-- Pricing Grid -->
-<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter mb-xl px-margin-mobile md:px-0">
-<!-- Growth Tier -->
-<div class="matte-card p-lg flex flex-col glow-hover group relative overflow-hidden">
-<div class="mb-md">
-<h3 class="font-headline-lg text-headline-lg text-stark-white mb-xs">Growth</h3>
-<p class="text-on-surface-variant font-body-md text-body-md">Precision security for rapidly scaling mid-market enterprises.</p>
-</div>
-<div class="mb-lg border-b border-outline-variant/20 pb-md">
-<span class="font-display-lg text-display-lg text-primary">$2,450</span>
-<span class="text-muted-gray font-label-sm text-label-sm">/ MONTH</span>
-</div>
-<div class="flex-1 space-y-md mb-xl">
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md">check_circle</span>
-<p class="font-body-md text-body-md">Up to 250 Endpoints monitored 24/7</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md">check_circle</span>
-<p class="font-body-md text-body-md">Advanced Threat Intelligence Feed</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md">check_circle</span>
-<p class="font-body-md text-body-md">Automated Compliance Reporting (SOC2/GDPR)</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md">check_circle</span>
-<p class="font-body-md text-body-md">Cloud Infrastructure Scanning</p>
-</div>
-<div class="flex items-start space-x-3 opacity-40">
-<span class="material-symbols-outlined text-md">circle</span>
-<p class="font-body-md text-body-md">Dedicated Security Architect</p>
-</div>
-</div>
-<button class="w-full bg-stark-white text-background py-md font-label-sm text-label-sm uppercase tracking-widest hover:bg-brand-crimson hover:text-white transition-all">
-                    Start Free Trial
-                </button>
-</div>
-<!-- Enterprise Tier -->
-<div class="matte-card p-lg flex flex-col glow-hover border-brand-crimson relative">
-<div class="absolute top-0 right-0 bg-brand-crimson text-white px-md py-xs font-label-sm text-label-sm uppercase tracking-widest font-bold">
-                    MOST POPULAR
-                </div>
-<div class="mb-md">
-<h3 class="font-headline-lg text-headline-lg text-primary mb-xs">Enterprise</h3>
-<p class="text-on-surface-variant font-body-md text-body-md">Global-scale resilience with custom infrastructure hooks.</p>
-</div>
-<div class="mb-lg border-b border-outline-variant/20 pb-md">
-<span class="font-display-lg text-display-lg text-primary">Custom</span>
-<span class="text-muted-gray font-label-sm text-label-sm">ANNUAL BILLING</span>
-</div>
-<div class="flex-1 space-y-md mb-xl">
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md" style="font-variation-settings: 'FILL' 1;">verified</span>
-<p class="font-body-md text-body-md">Unlimited Endpoints &amp; Global Clusters</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md" style="font-variation-settings: 'FILL' 1;">verified</span>
-<p class="font-body-md text-body-md">Zero-Trust Network Access (ZTNA) Integration</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md" style="font-variation-settings: 'FILL' 1;">verified</span>
-<p class="font-body-md text-body-md">Custom SIEM/SOAR API Endpoints</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md" style="font-variation-settings: 'FILL' 1;">verified</span>
-<p class="font-body-md text-body-md">Dedicated Security Architect (24/7)</p>
-</div>
-<div class="flex items-start space-x-3">
-<span class="material-symbols-outlined text-brand-crimson text-md" style="font-variation-settings: 'FILL' 1;">verified</span>
-<p class="font-body-md text-body-md">Whitelabel Internal Training Modules</p>
-</div>
-</div>
-<button class="w-full bg-brand-crimson text-white py-md font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-all">
-                    Contact Sales
-                </button>
-</div>
-</div>
-<!-- Section Separator Line -->
-<div class="w-full h-px bg-white/5 my-xl max-w-6xl mx-auto px-margin-mobile"></div>
-<!-- FAQ Section -->
-<section class="max-w-4xl mx-auto px-margin-mobile">
-<h3 class="font-headline-lg text-headline-lg text-primary mb-xl text-center">Frequently Asked Questions</h3>
-<div class="space-y-sm">
-<!-- FAQ Item 1 -->
-<div class="matte-card overflow-hidden transition-all duration-300">
-<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/30 text-left" onclick="toggleFaq(this)">
-<span class="font-title-md text-title-md">How does RedFox handle data privacy and GDPR?</span>
-<span class="material-symbols-outlined transform transition-transform duration-300">expand_more</span>
-</button>
-<div class="max-h-0 overflow-hidden transition-all duration-300 px-md bg-surface-container-lowest/50">
-<p class="py-md text-on-surface-variant font-body-md text-body-md">
-                            RedFox is built with a "Privacy by Design" architecture. We utilize local-first data processing where possible and encrypt all telemetry at rest using AES-256-GCM. We never store personal identifiable information (PII) of your end-users unless explicitly required for compliance modules.
-                        </p>
-</div>
-</div>
-<!-- FAQ Item 2 -->
-<div class="matte-card overflow-hidden transition-all duration-300">
-<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/30 text-left" onclick="toggleFaq(this)">
-<span class="font-title-md text-title-md">Can we switch from Growth to Enterprise mid-contract?</span>
-<span class="material-symbols-outlined transform transition-transform duration-300">expand_more</span>
-</button>
-<div class="max-h-0 overflow-hidden transition-all duration-300 px-md bg-surface-container-lowest/50">
-<p class="py-md text-on-surface-variant font-body-md text-body-md">
-                            Absolutely. Scaling is part of the growth process. You can upgrade your tier at any time through the RedFox dashboard. Credits for any remaining time on your Growth plan will be applied pro-rata to your new Enterprise agreement.
-                        </p>
-</div>
-</div>
-<!-- FAQ Item 3 -->
-<div class="matte-card overflow-hidden transition-all duration-300">
-<button class="w-full flex items-center justify-between p-md hover:bg-surface-variant/30 text-left" onclick="toggleFaq(this)">
-<span class="font-title-md text-title-md">Is the automated compliance reporting auditor-ready?</span>
-<span class="material-symbols-outlined transform transition-transform duration-300">expand_more</span>
-</button>
-<div class="max-h-0 overflow-hidden transition-all duration-300 px-md bg-surface-container-lowest/50">
-<p class="py-md text-on-surface-variant font-body-md text-body-md">
-                            Yes. Our reports are formatted specifically for common frameworks like SOC2 Type II, HIPAA, and GDPR. We provide a full audit trail of all security events and remediation steps taken, which significantly reduces the time spent in manual evidence collection during audit periods.
-                        </p>
-</div>
-</div>
-</div>
-</section>
-<!-- Trust Image Section -->
-<section class="mt-xl max-w-6xl mx-auto px-margin-mobile">
-<div class="relative h-64 w-full matte-card overflow-hidden border-outline-variant">
-<img alt="Server Security" class="w-full h-full object-cover opacity-30 mix-blend-luminosity grayscale" data-alt="A macro photography shot of a high-tech server room with glowing blue led lights on hardware racks. The image is captured in a minimalist style with a deep black background and sharp focus on the matte metallic textures of the servers. The lighting is cold and clinical, evoking a sense of high-security data protection and advanced technology in a professional environment." src="https://lh3.googleusercontent.com/aida/AP1WRLufx4tVP-_904svuQtro2RdWZi_bcJMt6NlgoxrSgFx2cV-2kAMI0HdHElW7tR7bE2d2nwCNscdXXxqrHZJANDTbkvI5Vlbuw8EKQEnoZg19ZPj05xP-d1YiFO-aj2LyyOwYnFRe5InxDXf5ywoE_uMZ-fWlhn9aOzlKyNmAhdUBhqsbLmY0Fzu52m4ByhPV3PZJxCDicsM0dsRlATS3-KaxsKImonXe41g8V3N12DcTUCdECTyspWn8OQ"/>
-<div class="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-background via-transparent to-transparent">
-<div class="text-center">
-<h4 class="font-headline-lg text-headline-lg text-primary">Securing $4B+ in Global Assets</h4>
-<p class="text-brand-crimson font-label-sm text-label-sm tracking-widest mt-xs font-bold">TRUSTED BY INDUSTRY TITANS</p>
-</div>
-</div>
-</div>
-</section>
-</main>
-<script>
-        function toggleFaq(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('span:last-child');
-            
-            // Close all other FAQs
-            document.querySelectorAll('section div.matte-card > div').forEach(item => {
-                if (item !== content && item.style.maxHeight) {
-                    item.style.maxHeight = null;
-                    item.previousElementSibling.querySelector('span:last-child').style.transform = 'rotate(0deg)';
-                }
-            });
-
-            if (content.style.maxHeight) {
-                content.style.maxHeight = null;
-                icon.style.transform = 'rotate(0deg)';
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.style.transform = 'rotate(180deg)';
-            }
-        }
-    </script>
-
-
-\`\`\``;
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: buildMetaTags({
@@ -308,9 +11,7 @@ export const Route = createFileRoute("/pricing")({
         "Flexible licensing tiers for enterprises of all sizes (Starter, Professional, Enterprise). Automated phishing campaigns, micro-learning, and HRI analytics.",
       path: "/pricing",
     }),
-    links: [
-      { rel: "canonical", href: `${SITE_CONFIG.domain}/pricing` },
-    ],
+    links: [{ rel: "canonical", href: `${SITE_CONFIG.domain}/pricing` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -318,14 +19,294 @@ export const Route = createFileRoute("/pricing")({
       },
     ],
   }),
-  component: Page,
+  component: PricingPage,
 });
 
-function Page() {
+function PricingPage() {
+  const [isYearly, setIsYearly] = useState(true);
+
   return (
     <>
       <SiteNav />
-      <div dangerouslySetInnerHTML={{ __html: HTML }} />
+      <main className="pt-28 min-h-screen max-w-full mx-auto px-margin-desktop py-xl">
+        {/* Header Section */}
+        <header className="mb-xl text-center max-w-3xl mx-auto">
+          <span className="text-brand-crimson font-label-sm text-label-sm uppercase tracking-widest block mb-2 font-bold">
+            PREDICTABLE ENTERPRISE LICENSING
+          </span>
+          <h1 className="font-display-lg text-display-lg mb-sm">
+            Scalable Security Investment for <span className="text-brand-crimson italic">Every Workforce</span>
+          </h1>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">
+            Deploy RedFox across your entire organization with zero hidden fees, full compliance mapping, and transparent per-user tiers.
+          </p>
+
+          {/* Billing Cycle Toggle */}
+          <div className="mt-8 inline-flex items-center gap-4 bg-surface-container-high p-2 rounded-full border border-outline-variant/30">
+            <span
+              className={`text-label-md font-bold cursor-pointer transition-colors ${
+                !isYearly ? "text-white" : "text-on-surface-variant"
+              }`}
+              onClick={() => setIsYearly(false)}
+            >
+              Monthly Billing
+            </span>
+            <button
+              onClick={() => setIsYearly(!isYearly)}
+              className="w-14 h-8 bg-surface-container-highest rounded-full p-1 relative transition-colors border border-outline-variant/40"
+              aria-label="Toggle annual billing"
+            >
+              <div
+                className={`w-6 h-6 bg-brand-crimson rounded-full transition-transform duration-300 ${
+                  isYearly ? "translate-x-6" : "translate-x-0"
+                }`}
+              ></div>
+            </button>
+            <span
+              className={`text-label-md font-bold cursor-pointer transition-colors flex items-center gap-2 ${
+                isYearly ? "text-white" : "text-on-surface-variant"
+              }`}
+              onClick={() => setIsYearly(true)}
+            >
+              Annual Billing
+              <span className="bg-brand-crimson/20 text-brand-crimson text-xs px-2 py-0.5 rounded-full border border-brand-crimson/40">
+                Save 20%
+              </span>
+            </span>
+          </div>
+        </header>
+
+        {/* Pricing Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-[1280px] mx-auto mb-xl items-stretch">
+          {/* Starter Plan */}
+          <div className="matte-card p-lg rounded-lg flex flex-col justify-between relative border border-outline-variant/20 hover:border-outline-variant/50 transition-all">
+            <div>
+              <span className="text-label-sm font-label-sm text-on-surface-variant block uppercase tracking-widest mb-1">
+                FOR GROWING TEAMS
+              </span>
+              <h2 className="font-headline-lg text-headline-lg font-bold mb-2">Starter</h2>
+              <p className="text-on-surface-variant text-sm mb-6">
+                Essential automated phishing drills and compliance awareness for smaller organizations.
+              </p>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-4xl font-extrabold text-white">
+                  ${isYearly ? "3.50" : "4.50"}
+                </span>
+                <span className="text-on-surface-variant text-sm">/ user / month</span>
+              </div>
+              <hr className="border-outline-variant/20 mb-6" />
+              <ul className="space-y-3 text-sm text-on-surface-variant mb-8">
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Up to 250 Active Users
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Monthly Phishing Drills
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Core Micro-Learning Library
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Basic Human Risk Score
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Standard Email Support
+                </li>
+              </ul>
+            </div>
+            <Link
+              to="/contact"
+              className="w-full text-center border border-outline text-white py-3 px-6 rounded font-bold hover:bg-surface-container-high transition-all uppercase tracking-wider text-xs"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Professional Plan (Highlighted) */}
+          <div className="matte-card p-lg rounded-lg flex flex-col justify-between relative border-2 border-brand-crimson/80 bg-surface-container-low/80 shadow-2xl scale-[1.02] z-10">
+            <div className="absolute -top-3 right-6 bg-brand-crimson text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              MOST POPULAR
+            </div>
+            <div>
+              <span className="text-brand-crimson font-label-sm text-label-sm block uppercase tracking-widest mb-1 font-bold">
+                ENTERPRISE RESILIENCE
+              </span>
+              <h2 className="font-headline-lg text-headline-lg font-bold mb-2 text-white">Professional</h2>
+              <p className="text-on-surface-variant text-sm mb-6">
+                Advanced threat simulations, workflow-native learning, and 1-click incident reporting.
+              </p>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-4xl font-extrabold text-white">
+                  ${isYearly ? "6.00" : "7.50"}
+                </span>
+                <span className="text-on-surface-variant text-sm">/ user / month</span>
+              </div>
+              <hr className="border-outline-variant/20 mb-6" />
+              <ul className="space-y-3 text-sm text-on-surface-variant mb-8">
+                <li className="flex items-center gap-2 text-white">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Up to 1,000 Active Users
+                </li>
+                <li className="flex items-center gap-2 text-white">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Continuous Adaptive Phishing & Quishing
+                </li>
+                <li className="flex items-center gap-2 text-white">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Slack & Teams Workflow Integration
+                </li>
+                <li className="flex items-center gap-2 text-white">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  1-Click Threat Report Button & AI Triage
+                </li>
+                <li className="flex items-center gap-2 text-white">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Full Human Risk Index (HRI) Analytics
+                </li>
+                <li className="flex items-center gap-2 text-white">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  SSO & Okta / Azure AD Integration
+                </li>
+              </ul>
+            </div>
+            <Link
+              to="/contact"
+              className="w-full text-center crimson-button py-3 px-6 rounded font-bold text-white uppercase tracking-wider text-xs shadow-lg"
+            >
+              Start 14-Day Enterprise Trial
+            </Link>
+          </div>
+
+          {/* Enterprise Plan */}
+          <div className="matte-card p-lg rounded-lg flex flex-col justify-between relative border border-outline-variant/20 hover:border-outline-variant/50 transition-all">
+            <div>
+              <span className="text-label-sm font-label-sm text-on-surface-variant block uppercase tracking-widest mb-1">
+                UNLIMITED SCALING
+              </span>
+              <h2 className="font-headline-lg text-headline-lg font-bold mb-2">Enterprise</h2>
+              <p className="text-on-surface-variant text-sm mb-6">
+                Custom threat models, dedicated threat architect, and white-glove SIEM/SOAR integrations.
+              </p>
+              <div className="flex items-baseline gap-1 mb-6">
+                <span className="text-4xl font-extrabold text-white">Custom</span>
+                <span className="text-on-surface-variant text-sm">annual agreement</span>
+              </div>
+              <hr className="border-outline-variant/20 mb-6" />
+              <ul className="space-y-3 text-sm text-on-surface-variant mb-8">
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Unlimited Users (1,000+)
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Dedicated Threat Architect & CISO Reports
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  Custom Threat Scenario Builder
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  SIEM / SOAR API Integrations
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-brand-crimson text-sm">check_circle</span>
+                  24/7 Priority SLA & Custom Mapping
+                </li>
+              </ul>
+            </div>
+            <Link
+              to="/contact"
+              className="w-full text-center border border-outline text-white py-3 px-6 rounded font-bold hover:bg-surface-container-high transition-all uppercase tracking-wider text-xs"
+            >
+              Contact Security Architects
+            </Link>
+          </div>
+        </div>
+
+        {/* Feature Comparison Table */}
+        <section className="max-w-[1280px] mx-auto mb-xl">
+          <h3 className="font-headline-lg text-headline-lg text-center mb-md font-bold">
+            Detailed Capability Comparison
+          </h3>
+          <div className="overflow-x-auto matte-card rounded-lg border border-outline-variant/20 p-md">
+            <table className="w-full text-left border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-outline-variant/30 text-on-surface">
+                  <th className="py-4 px-4 font-bold">Features & Capabilities</th>
+                  <th className="py-4 px-4 font-bold text-center">Starter</th>
+                  <th className="py-4 px-4 font-bold text-center text-brand-crimson">Professional</th>
+                  <th className="py-4 px-4 font-bold text-center">Enterprise</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-outline-variant/20 text-on-surface-variant">
+                <tr>
+                  <td className="py-3 px-4 font-medium text-white">Automated Phishing Simulations</td>
+                  <td className="py-3 px-4 text-center">Monthly</td>
+                  <td className="py-3 px-4 text-center text-white">Continuous Adaptive</td>
+                  <td className="py-3 px-4 text-center text-white">Custom Vectors</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-white">Micro-Learning Duration</td>
+                  <td className="py-3 px-4 text-center">2 - 3 Mins</td>
+                  <td className="py-3 px-4 text-center text-white">2 - 3 Mins</td>
+                  <td className="py-3 px-4 text-center text-white">Custom Lengths</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-white">Human Risk Index (HRI) Analytics</td>
+                  <td className="py-3 px-4 text-center">Basic</td>
+                  <td className="py-3 px-4 text-center text-white">Advanced Real-time</td>
+                  <td className="py-3 px-4 text-center text-white">Executive CISO Suite</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-white">Compliance Mapping (ISO 27001 / SOC 2)</td>
+                  <td className="py-3 px-4 text-center">Standard</td>
+                  <td className="py-3 px-4 text-center text-white">Full Automation</td>
+                  <td className="py-3 px-4 text-center text-white">Custom Frameworks</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-white">Single Sign-On (SSO / Azure / Okta)</td>
+                  <td className="py-3 px-4 text-center">—</td>
+                  <td className="py-3 px-4 text-center text-green-400">Included</td>
+                  <td className="py-3 px-4 text-center text-green-400">Included</td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium text-white">Dedicated Support SLA</td>
+                  <td className="py-3 px-4 text-center">Standard</td>
+                  <td className="py-3 px-4 text-center text-white">2 Business Hours</td>
+                  <td className="py-3 px-4 text-center text-brand-crimson font-bold">24/7 Priority</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Footer Logo Cluster */}
+        <footer className="mt-xl pt-lg border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center opacity-60">
+          <div className="flex items-center gap-sm mb-md md:mb-0">
+            <img alt="RedFox" className="w-10 h-10 object-cover rounded" src="/logo.jpg" />
+            <div>
+              <span className="font-label-sm text-label-sm tracking-widest uppercase">
+                Proprietary Technology of
+              </span>
+              <span className="font-headline-md text-title-md font-black text-white">BitLabs</span>
+            </div>
+          </div>
+          <div className="flex gap-lg">
+            <Link className="text-label-sm hover:text-brand-crimson transition-colors" to="/about">
+              PRIVACY POLICY
+            </Link>
+            <Link className="text-label-sm hover:text-brand-crimson transition-colors" to="/about">
+              SECURITY TERMS
+            </Link>
+            <span className="text-label-sm">© 2026 BitLabs Technology PLC</span>
+          </div>
+        </footer>
+      </main>
     </>
   );
 }

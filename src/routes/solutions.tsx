@@ -55,14 +55,40 @@ const HTML = `
 </li>
 </ul>
 </div>
-<div class="matte-card p-xs rounded-xl overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-<img alt="Gamified Training Hub Dashboard" class="w-full rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLsv10GOadeMsYdarFh7saY86ESKXdJw_bH7FBjLKbyTfWx-V_Xc8ORjx8sQFZtVxDrF4-1wJFCg3xJGdYzhpZRICmD3mo7bX-ZZgiv81twhwcEL42iCSAybXSpni22djkwkleCvxE7sTfPmaOpAbRtCs7bG1xIX3EbB4uvRP8PJwAy-572WpLxd7YgzjMy4OFyByx9aHIwDOMo9aTOXsTmXDdprK_MOfzsALdHpX_EFRsDCe9rziTuZPWs"/>
+<div class="matte-card p-6 rounded-xl border border-outline-variant/30 bg-surface-container-low/80 space-y-4">
+  <div class="flex justify-between items-center border-b border-outline-variant/20 pb-3">
+    <span class="text-xs font-mono text-brand-crimson font-bold">FINANCIAL & HEALTHCARE SOLUTION</span>
+    <span class="text-xs text-green-400 font-mono">HIPAA READY</span>
+  </div>
+  <div class="space-y-3 font-mono text-xs">
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20 flex justify-between items-center">
+      <span class="text-white font-medium">FINRA & SEC Compliance Controls</span>
+      <span class="text-green-400 font-bold">VERIFIED</span>
+    </div>
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20 flex justify-between items-center">
+      <span class="text-white font-medium">PHII & PII Threat Vectors</span>
+      <span class="text-brand-crimson font-bold">PROTECTED</span>
+    </div>
+  </div>
 </div>
 </div>
 <!-- Feature 02: Phishing Manager -->
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center py-xl matte-border-b">
-<div class="order-2 lg:order-1 matte-card p-xs rounded-xl overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-<img alt="Phishing Simulation Manager Interface" class="w-full rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLv8Lu8moqGMQf8uxMZ29K0bKwYikzURC8K9r48YOhFD93Qe2PoH626hHisdhdShDDj_mxUZGwO_rghjJSb7pyIzxUEl1sHmjVnVcRHYwZQA5uyGGmAFA330yHtMAt006jwqOW8jR1OIl_b7LjLBiBHJYj2HcKxg0yKpQH0uLkJTqLX2bTYckyoTgWa3Zd_HX6D4LXGlZRh0Y9PdCs3WMjrk3MK95Qc2IUqgeqhzLlMH3W7jlnwmLS63zdg"/>
+<div class="order-2 lg:order-1 matte-card p-6 rounded-xl border border-outline-variant/30 bg-surface-container-low/80 space-y-4">
+  <div class="flex justify-between items-center border-b border-outline-variant/20 pb-3">
+    <span class="text-xs font-mono text-white font-bold">ENTERPRISE THREAT VECTOR DRILLS</span>
+    <span class="text-xs text-brand-crimson font-mono font-bold">MULTI-TENANT</span>
+  </div>
+  <div class="grid grid-cols-2 gap-3 text-center">
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20">
+      <div class="text-2xl font-extrabold text-white">100%</div>
+      <div class="text-[10px] text-on-surface-variant uppercase mt-1">Audit Log Accuracy</div>
+    </div>
+    <div class="p-3 bg-surface-container-high/60 rounded border border-outline-variant/20">
+      <div class="text-2xl font-extrabold text-green-400">0.4s</div>
+      <div class="text-[10px] text-on-surface-variant uppercase mt-1">Triage Latency</div>
+    </div>
+  </div>
 </div>
 <div class="order-1 lg:order-2">
 <span class="text-brand-crimson/40 font-black text-6xl opacity-20 block mb-sm">02</span>
@@ -99,8 +125,21 @@ const HTML = `
 <span class="text-xs text-on-surface-variant italic">Audited by 40+ Certified Partners</span>
 </div>
 </div>
-<div class="matte-card p-xs rounded-xl overflow-hidden" style="opacity: 1; transform: translateY(0px); transition: 0.6s cubic-bezier(0.16, 1, 0.3, 1);">
-<img alt="Audit Trail Vault Security Events Feed" class="w-full rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLuzt25QvYtFM7sOwUxaxpOBrfmQsl7VgVvL_vk7p3JF6hDzsGaz_W8XRBSuoJbBKdUWuAWCjm6IK-K23tRaEedRkBEY4VkH8RAX0GajZSySM26aHd_haRIgokb9rQ1owxw6El5b1tBaFxyK2yJ479BXC9ixPROrV84SPb7XYR_PnLdKuuccKdeaUHfzhPS_wmkonf9s74eBbWALPj6zqeEHVMnSHZkoVUtur8_LmFCPsZfDAIHbAn4m2g"/>
+<div class="matte-card p-6 rounded-xl border border-outline-variant/30 bg-surface-container-low/80 space-y-4">
+  <div class="flex justify-between items-center border-b border-outline-variant/20 pb-3">
+    <span class="text-xs font-mono text-white font-bold">PUBLIC SECTOR & GOVERNMENT</span>
+    <span class="text-xs text-green-400 font-mono font-bold">NIST CSF 2.0</span>
+  </div>
+  <div class="space-y-2 text-xs font-mono">
+    <div class="flex justify-between items-center text-on-surface-variant p-2 bg-surface-container-high/50 rounded">
+      <span>NIST PR.AT-01 Awareness Training</span>
+      <span class="text-green-400 font-bold">COMPLIANT</span>
+    </div>
+    <div class="flex justify-between items-center text-on-surface-variant p-2 bg-surface-container-high/50 rounded">
+      <span>FedRAMP Low / Moderate Alignment</span>
+      <span class="text-green-400 font-bold">ALIGNED</span>
+    </div>
+  </div>
 </div>
 </div>
 </section>

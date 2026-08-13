@@ -20,13 +20,58 @@ const HTML = `
                     Empower your workforce with automated phishing simulations and gamified training designed for the modern enterprise. Turn your weakest link into your strongest defense.
                 </p>
 <div class="flex flex-wrap gap-4">
-<a href="/contact" class="bg-brand-crimson text-white px-8 py-4 font-label-md text-label-md rounded hover:opacity-90 transition-all">Request a Demo</a>
-<button class="border border-outline text-on-surface px-8 py-4 font-label-md text-label-md rounded hover:bg-surface-container-low transition-all">See How It Works</button>
+<a href="/contact" class="bg-brand-crimson text-white px-8 py-4 font-label-md text-label-md rounded hover:opacity-90 transition-all font-bold uppercase tracking-wider">Request a Demo</a>
+<a href="/platform" class="border border-outline-variant text-on-surface px-8 py-4 font-label-md text-label-md rounded hover:bg-surface-container-low transition-all font-bold">See How It Works</a>
 </div>
 </div>
 <div class="relative group">
-<div class="relative matte-card p-1 rounded-sm overflow-hidden bg-surface-container-highest border-outline-variant">
-<img alt="Dashboard Interface" class="w-full h-auto rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2T1GfXyraJzQU-cOyaCDORGUJ_5jA7bhYsT-7HSbZjnoNy4zZEWwqhu8NgcGD2kv6i7D5iWR4mRT22maMUX56NkjSpGjm07snIWlk2EUJ_sqDIz9bRn9DQOb9XdSj3HFATBJJmbkJ_fZ6hTfSqzLoPqsQC6K2PZSJ_rpXKoFK52JKlVwseUye83X2Fb37S0OqX9-3t_-Iu0AoJhNouselsGFjqhZB7WjWLsIs42GwzUgBc8GO8BN_6frAIh2P-miph3eg2yD8eyw"/>
+<div class="relative matte-card p-6 rounded-lg overflow-hidden bg-surface-container-low/90 border border-outline-variant/40 shadow-2xl space-y-6">
+  <div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+    <div class="flex items-center gap-3">
+      <div class="w-3 h-3 rounded-full bg-brand-crimson animate-ping"></div>
+      <span class="font-mono text-xs font-bold text-white uppercase tracking-wider">REDFOX SOC — HUMAN RISK ENGINE</span>
+    </div>
+    <span class="text-xs font-mono text-brand-crimson bg-brand-crimson/10 border border-brand-crimson/30 px-2 py-0.5 rounded">REAL-TIME TELEMETRY</span>
+  </div>
+  
+  <div class="grid grid-cols-2 gap-4">
+    <div class="bg-surface-container-high/80 p-4 rounded border border-outline-variant/30">
+      <span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider block mb-1">Human Risk Index (HRI)</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-3xl font-extrabold text-white">78.4</span>
+        <span class="text-xs text-green-400 font-bold">▲ 14.2% Risk Reduction</span>
+      </div>
+      <div class="w-full bg-surface-container-highest h-2 rounded-full mt-3 overflow-hidden">
+        <div class="bg-gradient-to-r from-brand-crimson to-green-500 h-full w-[78%]"></div>
+      </div>
+    </div>
+    
+    <div class="bg-surface-container-high/80 p-4 rounded border border-outline-variant/30">
+      <span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider block mb-1">Phishing Resilience Rate</span>
+      <div class="flex items-baseline gap-2">
+        <span class="text-3xl font-extrabold text-white">94.1%</span>
+        <span class="text-xs text-green-400 font-bold">&lt; 2 min Report Speed</span>
+      </div>
+      <div class="w-full bg-surface-container-highest h-2 rounded-full mt-3 overflow-hidden">
+        <div class="bg-green-500 h-full w-[94%]"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-surface-container-high/60 p-4 rounded border border-outline-variant/30 font-mono text-xs text-on-surface-variant space-y-2">
+    <div class="flex justify-between items-center text-white font-bold border-b border-outline-variant/20 pb-2">
+      <span>RECENT AUTOMATED THREAT DRILLS</span>
+      <span class="text-brand-crimson">500+ Organizations Active</span>
+    </div>
+    <div class="flex justify-between items-center text-[11px]">
+      <span class="text-white">Financial Dept — Spear-Phishing Drill</span>
+      <span class="text-green-400">98% Neutralized</span>
+    </div>
+    <div class="flex justify-between items-center text-[11px]">
+      <span class="text-white">Executive Suite — Executive Quishing Drill</span>
+      <span class="text-green-400">100% Reported</span>
+    </div>
+  </div>
 </div>
 </div>
 </div>
@@ -231,7 +276,7 @@ const HTML = `
 <p class="font-body-md text-body-md text-on-surface-variant">Advanced cybersecurity awareness for the modern enterprise human layer.</p>
 <div class="flex gap-4">
 <div class="w-12 h-12 bg-surface-container-low border border-outline-variant rounded-sm flex items-center justify-center p-2 opacity-50 grayscale hover:grayscale-0 transition-all">
-<img alt="ISO Logo" class="h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOaPJDSt2yFNN89PsomrAT_98Epg2P_49ds_laqCYzuyEPFaAupZQh2DNJ7l9KzedFjtmDiwng1DF6EqUzOSiNI22zpIBDRdH8Li3EwBE1v7ZAo14jLrbIO9RY9qT6tV7sahcV5swcUi3fAG8NKAbcKwDfLuap91FrENLSueJ4izGEjHYkdTJWqOlOfGpqS2gfU0w-UiVvKd_gqASNxz4Q4HWbpZJjlOB0Z9npt9RRJSxHlycZEw5ccF1fT-fNNWlhbgiKj-SlXZQ"/>
+<div class="h-full flex items-center justify-center font-bold text-xs text-brand-crimson uppercase tracking-widest px-2 border border-brand-crimson/30 rounded bg-brand-crimson/10">ISO 27001 Certified</div>
 </div>
 <div class="w-12 h-12 bg-surface-container-low border border-outline-variant rounded-sm flex items-center justify-center p-2 opacity-50 grayscale hover:grayscale-0 transition-all">
 <span class="font-bold text-[10px] text-on-surface">SOC2</span>
