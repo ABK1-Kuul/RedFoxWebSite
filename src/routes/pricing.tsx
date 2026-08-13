@@ -42,34 +42,41 @@ function PricingPage() {
           </p>
 
           {/* Billing Cycle Toggle */}
-          <div className="mt-8 inline-flex items-center gap-4 bg-surface-container-high p-2 rounded-full border border-outline-variant/30">
+          <div className="mt-8 inline-flex items-center gap-3 bg-surface-container-high px-5 py-2.5 rounded-full border border-outline-variant/30 shadow-lg">
             <span
-              className={`text-label-md font-bold cursor-pointer transition-colors ${
-                !isYearly ? "text-white" : "text-on-surface-variant"
+              className={`text-sm font-bold cursor-pointer transition-colors select-none ${
+                !isYearly ? "text-white" : "text-on-surface-variant hover:text-white"
               }`}
               onClick={() => setIsYearly(false)}
             >
               Monthly Billing
             </span>
+
             <button
+              type="button"
               onClick={() => setIsYearly(!isYearly)}
-              className="w-14 h-8 bg-surface-container-highest rounded-full p-1 relative transition-colors border border-outline-variant/40"
-              aria-label="Toggle annual billing"
+              className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-300 ease-in-out focus:outline-none bg-surface-container-highest border-outline-variant/40 ${
+                isYearly ? "bg-surface-container-highest" : "bg-surface-container-highest"
+              }`}
+              role="switch"
+              aria-checked={isYearly}
+              aria-label="Toggle billing frequency"
             >
-              <div
-                className={`w-6 h-6 bg-brand-crimson rounded-full transition-transform duration-300 ${
-                  isYearly ? "translate-x-6" : "translate-x-0"
+              <span
+                className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-brand-crimson shadow-md ring-0 transition duration-300 ease-in-out ${
+                  isYearly ? "translate-x-7" : "translate-x-0"
                 }`}
-              ></div>
+              />
             </button>
+
             <span
-              className={`text-label-md font-bold cursor-pointer transition-colors flex items-center gap-2 ${
-                isYearly ? "text-white" : "text-on-surface-variant"
+              className={`text-sm font-bold cursor-pointer transition-colors flex items-center gap-2 select-none ${
+                isYearly ? "text-white" : "text-on-surface-variant hover:text-white"
               }`}
               onClick={() => setIsYearly(true)}
             >
               Annual Billing
-              <span className="bg-brand-crimson/20 text-brand-crimson text-xs px-2 py-0.5 rounded-full border border-brand-crimson/40">
+              <span className="bg-brand-crimson/20 text-brand-crimson text-[11px] font-extrabold px-2.5 py-0.5 rounded-full border border-brand-crimson/40">
                 Save 20%
               </span>
             </span>
