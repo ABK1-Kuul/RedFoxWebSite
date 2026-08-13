@@ -55,15 +55,13 @@ function PricingPage() {
             <button
               type="button"
               onClick={() => setIsYearly(!isYearly)}
-              className={`relative inline-flex h-7 w-14 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-300 ease-in-out focus:outline-none bg-surface-container-highest border-outline-variant/40 ${
-                isYearly ? "bg-surface-container-highest" : "bg-surface-container-highest"
-              }`}
+              className="relative inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full p-1 transition-colors duration-300 ease-in-out bg-surface-container-highest border border-outline-variant/40 focus:outline-none"
               role="switch"
               aria-checked={isYearly}
               aria-label="Toggle billing frequency"
             >
               <span
-                className={`pointer-events-none inline-block h-6 w-6 transform rounded-full bg-brand-crimson shadow-md ring-0 transition duration-300 ease-in-out ${
+                className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-brand-crimson shadow-md transition duration-300 ease-in-out ${
                   isYearly ? "translate-x-7" : "translate-x-0"
                 }`}
               />
