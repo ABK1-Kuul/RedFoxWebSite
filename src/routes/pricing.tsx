@@ -28,7 +28,7 @@ function PricingPage() {
   return (
     <>
       <SiteNav />
-      <main className="pt-28 min-h-screen max-w-full mx-auto px-margin-desktop py-xl">
+      <main className="pt-24 min-h-screen max-w-[1440px] mx-auto px-6 lg:px-12 py-xl">
         {/* Header Section */}
         <header className="mb-xl text-center max-w-3xl mx-auto">
           <span className="text-brand-crimson font-label-sm text-label-sm uppercase tracking-widest block mb-2 font-bold">

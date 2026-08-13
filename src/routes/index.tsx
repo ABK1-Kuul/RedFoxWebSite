@@ -286,17 +286,6 @@ const HTML = `
 </div>
 </section>
 </main>
-
-<script>
-    const toggle = document.getElementById('pricingToggle');
-    const knob = document.getElementById('toggleKnob');
-    let isYearly = false;
-
-    toggle.addEventListener('click', () => {
-        isYearly = !isYearly;
-        knob.style.transform = isYearly ? 'translateX(24px)' : 'translateX(0px)';
-    });
-</script>
 `;
 export const Route = createFileRoute("/")({
   head: () => ({

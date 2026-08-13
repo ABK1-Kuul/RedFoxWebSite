@@ -84,7 +84,7 @@ function ContactPage() {
   return (
     <>
       <SiteNav />
-      <main className="pt-32 max-w-full mx-auto px-margin-desktop py-xl">
+        <main className="pt-24 min-h-screen max-w-[1440px] mx-auto px-6 lg:px-12 py-xl">
         {/* Header Section */}
         <header className="mb-xl max-w-2xl">
           <h1 className="font-display-lg text-display-lg mb-sm">

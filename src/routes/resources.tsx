@@ -3,10 +3,10 @@ import { SiteNav } from "@/components/SiteNav";
 import { buildMetaTags, SITE_CONFIG } from "@/lib/seo";
 
 const HTML = `
-<main class="w-full bg-background pt-24">
+<main class="w-full bg-background pt-24 pb-20">
 <!-- Hero Section -->
-<section class="px-margin-desktop py-xl">
-<div class="max-w-[1280px] mx-auto">
+<section class="px-6 lg:px-12 py-xl">
+<div class="max-w-[1440px] mx-auto">
 <div class="flex flex-col md:flex-row items-end justify-between gap-gutter hairline-y pb-md mb-xl">
 <div class="max-w-2xl">
 <span class="inline-block px-3 py-1 bg-brand-crimson/10 border border-brand-crimson/20 text-brand-crimson text-[10px] font-bold tracking-[0.2em] mb-4">KNOWLEDGE BASE</span>
@@ -182,17 +182,6 @@ const HTML = `
 </div>
 </section>
 </main>
-<script>
-    document.querySelectorAll('.matte-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', \`\${x}px\`);
-            card.style.setProperty('--mouse-y', \`\${y}px\`);
-        });
-    });
-</script>
 `;
 export const Route = createFileRoute("/resources")({
   head: () => ({

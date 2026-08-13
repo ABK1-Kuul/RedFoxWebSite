@@ -4,9 +4,9 @@ import { buildMetaTags, getSoftwareApplicationSchema, SITE_CONFIG } from "@/lib/
 
 const HTML = `
 <!-- Main Content Canvas -->
-<main class="min-h-screen pt-32">
+<main class="min-h-screen pt-24 pb-20">
 <!-- Content Area -->
-<div class="max-w-[1280px] mx-auto px-margin-desktop pb-xl">
+<div class="max-w-[1440px] mx-auto px-6 lg:px-12 pb-xl">
 <!-- Hero Section / Bento Grid Start -->
 <section class="grid grid-cols-12 gap-gutter mb-xl">
 <div class="col-span-12 lg:col-span-8 flex flex-col justify-center">
@@ -177,29 +177,6 @@ const HTML = `
 </div>
 
 </main>
-<!-- Navigation Shell Mobile -->
-<div class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-high/90 backdrop-blur-xl border-t border-outline-variant/20 flex justify-around items-center z-[70] px-sm">
-<a class="flex flex-col items-center gap-unit text-brand-crimson" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shield</span>
-<span class="text-[10px]">Home</span>
-</a>
-<a class="flex flex-col items-center gap-unit text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">radar</span>
-<span class="text-[10px]">Threats</span>
-</a>
-<a class="flex flex-col items-center gap-unit text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">school</span>
-<span class="text-[10px]">Training</span>
-</a>
-<a class="flex flex-col items-center gap-unit text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">analytics</span>
-<span class="text-[10px]">Stats</span>
-</a>
-<a class="flex flex-col items-center gap-unit text-on-surface-variant" href="#">
-<span class="material-symbols-outlined">person</span>
-<span class="text-[10px]">Profile</span>
-</a>
-</div>
 <script>
         // Micro-interaction for scroll reveals
         document.addEventListener('DOMContentLoaded', () => {

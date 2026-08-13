@@ -4,9 +4,9 @@ import { buildMetaTags, getOrganizationSchema, SITE_CONFIG } from "@/lib/seo";
 import heroImage from "@/assets/redfox-hero.jpg";
 
 const HTML = `
-<main class="relative min-h-screen pt-24">
+<main class="relative min-h-screen pt-24 pb-20">
   <!-- Hero Section -->
-  <section class="relative px-margin-desktop py-xl topo-pattern">
+  <section class="relative max-w-[1440px] mx-auto px-6 lg:px-12 py-xl topo-pattern">
     <div class="max-w-4xl">
       <p class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-[0.3em] mb-sm">About RedFox · Cybersecurity Awareness Platform</p>
       <h1 class="font-display-lg text-display-lg text-primary mb-md leading-tight">
