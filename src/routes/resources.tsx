@@ -181,21 +181,6 @@ const HTML = `
 </div>
 </div>
 </section>
-<!-- Footer -->
-<footer class="px-margin-desktop py-lg bg-surface-container-lowest mt-xl">
-<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
-<div class="flex items-center gap-2">
-<img alt="RedFox" class="w-10 h-10 object-cover rounded" src="/logo.jpg" />
-<span class="font-label-md text-label-md text-stark-white font-bold">RedFox Intelligence Hub</span>
-</div>
-<p class="text-[12px] text-muted-gray">© 2026 BitLabs Technology PLC. All assets are restricted under ISO 27001 compliance.</p>
-<div class="flex gap-6">
-<a class="text-[12px] text-muted-gray hover:text-brand-crimson transition-colors" href="#">Privacy</a>
-<a class="text-[12px] text-muted-gray hover:text-brand-crimson transition-colors" href="#">Terms</a>
-<a class="text-[12px] text-muted-gray hover:text-brand-crimson transition-colors" href="/contact">Contact</a>
-</div>
-</div>
-</footer>
 </main>
 <script>
     document.querySelectorAll('.matte-card').forEach(card => {

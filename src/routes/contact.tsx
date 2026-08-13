@@ -320,31 +320,7 @@ function ContactPage() {
           </div>
         </div>
 
-        {/* Footer Logo Cluster */}
-        <footer className="mt-xl pt-lg border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center opacity-60">
-          <div className="flex items-center gap-sm mb-md md:mb-0">
-            <img alt="RedFox" className="w-10 h-10 object-cover rounded" src="/logo.jpg" />
-            <div>
-              <span className="font-label-sm text-label-sm tracking-widest uppercase">
-                Proprietary Technology of
-              </span>
-              <span className="font-headline-md text-title-md font-black text-white">
-                BitLabs
-              </span>
-            </div>
-          </div>
-          <div className="flex gap-lg">
-            <a className="text-label-sm hover:text-brand-crimson transition-colors" href="#">
-              PRIVACY POLICY
-            </a>
-            <a className="text-label-sm hover:text-brand-crimson transition-colors" href="#">
-              SECURITY TERMS
-            </a>
-            <span className="text-label-sm">
-              © 2026 BitLabs Technology PLC
-            </span>
-          </div>
-        </footer>
+
       </main>
     </>
   );

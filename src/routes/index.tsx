@@ -286,57 +286,7 @@ const HTML = `
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="w-full px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-start gap-gutter max-w-container-max-width mx-auto bg-surface-container-lowest border-t border-outline-variant">
-<div class="space-y-6 max-w-xs">
-<div class="flex items-center gap-2">
-<img alt="RedFox" class="w-6 h-6" src="/logo.jpg"/>
-<span class="font-headline-md text-headline-md font-bold text-on-surface">RedFox</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">Advanced cybersecurity awareness for the modern enterprise human layer.</p>
-<div class="flex gap-4">
-<div class="w-12 h-12 bg-surface-container-low border border-outline-variant rounded-sm flex items-center justify-center p-2 opacity-50 grayscale hover:grayscale-0 transition-all">
-<div class="h-full flex items-center justify-center font-bold text-xs text-brand-crimson uppercase tracking-widest px-2 border border-brand-crimson/30 rounded bg-brand-crimson/10">ISO 27001 Certified</div>
-</div>
-<div class="w-12 h-12 bg-surface-container-low border border-outline-variant rounded-sm flex items-center justify-center p-2 opacity-50 grayscale hover:grayscale-0 transition-all">
-<span class="font-bold text-[10px] text-on-surface">SOC2</span>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
-<div class="space-y-4">
-<h5 class="font-label-md text-label-md text-on-surface">Platform</h5>
-<nav class="flex flex-col gap-2">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Simulations</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Training</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Reporting</a>
-</nav>
-</div>
-<div class="space-y-4">
-<h5 class="font-label-md text-label-md text-on-surface">Company</h5>
-<nav class="flex flex-col gap-2">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">About Us</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Careers</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact Us</a>
-</nav>
-</div>
-<div class="space-y-4">
-<h5 class="font-label-md text-label-md text-on-surface">Legal</h5>
-<nav class="flex flex-col gap-2">
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Service</a>
-<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Compliance</a>
-</nav>
-</div>
-</div>
-<div class="w-full pt-12 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4">
-<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 BitLabs Technology PLC. All rights reserved.</p>
-<div class="flex gap-6">
-<span class="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer" data-icon="public">public</span>
-<span class="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer" data-icon="share">share</span>
-</div>
-</div>
-</footer>
+
 <script>
     const toggle = document.getElementById('pricingToggle');
     const knob = document.getElementById('toggleKnob');

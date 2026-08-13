@@ -172,49 +172,7 @@ const HTML = `
 </section>
 </div>
 <!-- Footer -->
-<footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-xl px-margin-desktop">
-<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-start gap-xl">
-<div class="max-w-xs">
-<div class="flex items-center gap-xs mb-md">
-<img alt="RedFox" class="w-8 h-8 object-contain" src="/logo.jpg"/>
-<span class="font-headline-md text-headline-md font-bold text-white">RedFox</span>
-</div>
-<p class="text-on-surface-variant text-sm">Securing the human element of the modern enterprise through precision engineering and tactical awareness.</p>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-xl">
-<div>
-<h6 class="text-brand-crimson font-bold text-sm mb-md uppercase tracking-widest">Product</h6>
-<ul class="space-y-sm text-sm text-on-surface-variant">
-<li class=""><a class="hover:text-brand-crimson transition-colors" href="#">Features</a></li>
-<li class=""><a class="hover:text-brand-crimson transition-colors" href="/pricing">Pricing</a></li>
-<li class=""><a class="hover:text-brand-crimson transition-colors" href="#">Integrations</a></li>
-</ul>
-</div>
-<div>
-<h6 class="text-brand-crimson font-bold text-sm mb-md uppercase tracking-widest">Company</h6>
-<ul class="space-y-sm text-sm text-on-surface-variant">
-<li class=""><a class="hover:text-brand-crimson transition-colors" href="#">About Us</a></li>
-<li class=""><a class="hover:text-brand-crimson transition-colors" href="#">Careers</a></li>
-<li class=""><a class="hover:text-brand-crimson transition-colors" href="#">Legal</a></li>
-</ul>
-</div>
-<div>
-<h6 class="text-brand-crimson font-bold text-sm mb-md uppercase tracking-widest">Status</h6>
-<div class="flex items-center gap-xs text-xs text-on-surface-variant">
-<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            All Systems Operational
-                        </div>
-</div>
-</div>
-</div>
-<div class="max-w-[1280px] mx-auto mt-xl pt-md border-t border-outline-variant/10 text-xs text-on-surface-variant flex justify-between">
-<p class="">© 2026 BitLabs Technology PLC. All rights reserved.</p>
-<div class="flex gap-md">
-<a class="hover:text-white" href="#">Privacy Policy</a>
-<a class="hover:text-white" href="#">Terms of Service</a>
-</div>
-</div>
-</footer>
+
 </main>
 <!-- Navigation Shell Mobile -->
 <div class="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-surface-container-high/90 backdrop-blur-xl border-t border-outline-variant/20 flex justify-around items-center z-[70] px-sm">
