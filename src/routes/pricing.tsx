@@ -55,16 +55,14 @@ function PricingPage() {
             <button
               type="button"
               onClick={() => setIsYearly(!isYearly)}
-              className="relative inline-flex h-7 w-14 shrink-0 cursor-pointer items-center rounded-full p-1 transition-colors duration-300 ease-in-out bg-surface-container-highest border border-outline-variant/40 focus:outline-none"
+              className={`w-14 h-8 rounded-full p-1 border border-outline-variant/40 bg-surface-container-highest flex items-center transition-all duration-300 cursor-pointer focus:outline-none ${
+                isYearly ? "justify-end" : "justify-start"
+              }`}
               role="switch"
               aria-checked={isYearly}
               aria-label="Toggle billing frequency"
             >
-              <span
-                className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-brand-crimson shadow-md transition duration-300 ease-in-out ${
-                  isYearly ? "translate-x-7" : "translate-x-0"
-                }`}
-              />
+              <span className="w-5 h-5 rounded-full bg-brand-crimson shadow-md pointer-events-none transition-all duration-300" />
             </button>
 
             <span
