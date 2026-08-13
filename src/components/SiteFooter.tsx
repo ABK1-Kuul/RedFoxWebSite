@@ -2,97 +2,107 @@ import { Link } from "@tanstack/react-router";
 
 export function SiteFooter() {
   return (
-    <footer className="w-full bg-surface-container-lowest border-t border-outline-variant/30 pt-16 pb-12 px-6 lg:px-12 text-on-surface">
-      <div className="max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-outline-variant/20">
+    <footer className="w-full px-6 lg:px-12 py-12 bg-surface-container-lowest border-t border-outline-variant">
+      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+        
+        {/* Brand Section */}
+        <div className="space-y-6 max-w-xs">
+          <Link to="/" className="flex items-center gap-2">
+            <img alt="RedFox" className="w-8 h-8 object-cover rounded" src="/logo.jpg" />
+            <span className="font-headline-md text-xl font-bold text-on-surface">RedFox</span>
+          </Link>
           
-          {/* Brand Column */}
-          <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <img alt="RedFox" className="w-10 h-10 object-cover rounded shadow-md" src="/logo.jpg" />
-              <div>
-                <span className="font-headline-md text-xl font-bold text-white tracking-tight block">RedFox</span>
-                <span className="text-[11px] font-mono text-brand-crimson uppercase tracking-widest block">Human Risk Management Engine</span>
-              </div>
-            </Link>
-            
-            <p className="text-sm text-on-surface-variant max-w-sm leading-relaxed">
-              Enterprise cyber-resilience engineered by{" "}
-              <a
-                href="https://bitlabsbuild.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white font-medium hover:text-brand-crimson transition-colors underline underline-offset-2"
-              >
-                BitLabs Technology PLC
-              </a>
-              . Transforming workforce vulnerability into proactive defense across high-risk global sectors.
-            </p>
+          <p className="font-body-md text-body-md text-on-surface-variant">
+            Advanced cybersecurity awareness for the modern enterprise human layer. Engineered by{" "}
+            <a
+              href="https://bitlabsbuild.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white font-medium hover:text-brand-crimson transition-colors underline underline-offset-2"
+            >
+              BitLabs Technology PLC
+            </a>
+            .
+          </p>
 
-            <div className="flex items-center gap-3 pt-2">
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded bg-green-500/10 border border-green-500/30 text-green-400 text-xs font-mono font-medium">
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                SOC Telemetry Active
-              </span>
-              <span className="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/30 text-[11px] text-on-surface-variant font-mono">
-                99.99% SLA
+          <div className="flex items-center gap-3">
+            <div className="h-10 bg-surface-container-low border border-outline-variant rounded-sm flex items-center justify-center px-3 opacity-80 hover:opacity-100 transition-all">
+              <span className="font-bold text-xs text-brand-crimson uppercase tracking-widest px-2 border border-brand-crimson/30 rounded bg-brand-crimson/10">
+                ISO 27001 Certified
               </span>
             </div>
+            <div className="h-10 bg-surface-container-low border border-outline-variant rounded-sm flex items-center justify-center px-3 opacity-80 hover:opacity-100 transition-all">
+              <span className="font-bold text-xs text-on-surface">SOC2</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
+          
+          {/* Platform */}
+          <div className="space-y-4">
+            <h5 className="font-label-md text-label-md text-on-surface font-bold">Platform</h5>
+            <nav className="flex flex-col gap-2">
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/platform">
+                Simulations
+              </Link>
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/platform">
+                Training
+              </Link>
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/platform">
+                Reporting
+              </Link>
+            </nav>
           </div>
 
-          {/* Product / Platform */}
+          {/* Company */}
           <div className="space-y-4">
-            <h4 className="text-xs font-mono font-bold text-brand-crimson uppercase tracking-widest">Platform</h4>
-            <ul className="space-y-2.5 text-sm text-on-surface-variant">
-              <li><Link to="/platform" className="hover:text-white transition-colors">Adaptive Phishing Drills</Link></li>
-              <li><Link to="/platform" className="hover:text-white transition-colors">Human Risk Index (HRI)</Link></li>
-              <li><Link to="/platform" className="hover:text-white transition-colors">Micro-Learning Modules</Link></li>
-              <li><Link to="/platform" className="hover:text-white transition-colors">1-Click Threat Reporting</Link></li>
-              <li><Link to="/platform" className="hover:text-white transition-colors">Audit Trail Vault</Link></li>
-            </ul>
+            <h5 className="font-label-md text-label-md text-on-surface font-bold">Company</h5>
+            <nav className="flex flex-col gap-2">
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/about">
+                About Us
+              </Link>
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/about">
+                Careers
+              </Link>
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/contact">
+                Contact Us
+              </Link>
+            </nav>
           </div>
 
-          {/* Solutions & Sectors */}
+          {/* Legal */}
           <div className="space-y-4">
-            <h4 className="text-xs font-mono font-bold text-brand-crimson uppercase tracking-widest">Solutions</h4>
-            <ul className="space-y-2.5 text-sm text-on-surface-variant">
-              <li><Link to="/solutions" className="hover:text-white transition-colors">Financial Services</Link></li>
-              <li><Link to="/solutions" className="hover:text-white transition-colors">Healthcare & Life Sciences</Link></li>
-              <li><Link to="/solutions" className="hover:text-white transition-colors">Global Technology</Link></li>
-              <li><Link to="/solutions" className="hover:text-white transition-colors">Public Sector & Defense</Link></li>
-              <li><Link to="/solutions" className="hover:text-white transition-colors">Energy & Critical Infra</Link></li>
-            </ul>
-          </div>
-
-          {/* Company & Resources */}
-          <div className="space-y-4">
-            <h4 className="text-xs font-mono font-bold text-brand-crimson uppercase tracking-widest">Resources & Company</h4>
-            <ul className="space-y-2.5 text-sm text-on-surface-variant">
-              <li><Link to="/resources" className="hover:text-white transition-colors">Research & Whitepapers</Link></li>
-              <li><Link to="/pricing" className="hover:text-white transition-colors">Enterprise Pricing</Link></li>
-              <li><Link to="/about" className="hover:text-white transition-colors">About BitLabs PLC</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact Engineers</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Request Enterprise Demo</Link></li>
-            </ul>
+            <h5 className="font-label-md text-label-md text-on-surface font-bold">Legal</h5>
+            <nav className="flex flex-col gap-2">
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/about">
+                Privacy Policy
+              </Link>
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/about">
+                Terms of Service
+              </Link>
+              <Link className="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" to="/about">
+                Compliance
+              </Link>
+            </nav>
           </div>
 
         </div>
+      </div>
 
-        {/* Bottom Legal & Security Bar */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant">
-          <div className="flex flex-wrap items-center gap-4">
-            <span>© 2026 BitLabs Technology PLC. All rights reserved.</span>
-            <span className="hidden md:inline text-outline-variant">•</span>
-            <span>RedFox is an enterprise cyber-resilience product of BitLabs Technology PLC.</span>
-          </div>
-
-          <div className="flex items-center gap-6">
-            <Link to="/about" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/about" className="hover:text-white transition-colors">Security Standards</Link>
-            <span className="px-2 py-0.5 rounded bg-brand-crimson/10 border border-brand-crimson/30 text-brand-crimson text-[10px] font-bold uppercase tracking-wider">
-              ISO 27001 & SOC 2
-            </span>
-          </div>
+      {/* Bottom Bar */}
+      <div className="max-w-[1440px] mx-auto mt-12 pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p className="font-label-sm text-label-sm text-on-surface-variant">
+          © 2026 BitLabs Technology PLC. All rights reserved.
+        </p>
+        <div className="flex gap-6">
+          <Link to="/about" aria-label="Global Standards" className="text-on-surface-variant hover:text-on-surface transition-colors">
+            <span className="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer">public</span>
+          </Link>
+          <Link to="/contact" aria-label="Contact Us" className="text-on-surface-variant hover:text-on-surface transition-colors">
+            <span className="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer">share</span>
+          </Link>
         </div>
       </div>
     </footer>
