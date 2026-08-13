@@ -1,8 +1,8 @@
-import { useState } from "@tanstack/react-router";
+import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { toast } from "sonner";
 import { SiteNav } from "@/components/SiteNav";
-import { sendContactEmail, type ContactFormData } from "@/server/contact";
+import { sendContactEmail, type ContactFormData } from "@/lib/contact-server";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
