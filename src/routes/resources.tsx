@@ -188,7 +188,7 @@ const HTML = `
 <img alt="RedFox" class="w-10 h-10 object-cover rounded" src="/logo.jpg" />
 <span class="font-label-md text-label-md text-stark-white font-bold">RedFox Intelligence Hub</span>
 </div>
-<p class="text-[12px] text-muted-gray">© 2024 RedFox Cybersecurity. All assets are restricted under ISO 27001 compliance.</p>
+<p class="text-[12px] text-muted-gray">© 2026 BitLabs Technology PLC. All assets are restricted under ISO 27001 compliance.</p>
 <div class="flex gap-6">
 <a class="text-[12px] text-muted-gray hover:text-brand-crimson transition-colors" href="#">Privacy</a>
 <a class="text-[12px] text-muted-gray hover:text-brand-crimson transition-colors" href="#">Terms</a>

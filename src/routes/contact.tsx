@@ -340,9 +340,9 @@ function ContactPage() {
             <a className="text-label-sm hover:text-brand-crimson transition-colors" href="#">
               SECURITY TERMS
             </a>
-            <a className="text-label-sm hover:text-brand-crimson transition-colors" href="#">
-              © 2024
-            </a>
+            <span className="text-label-sm">
+              © 2026 BitLabs Technology PLC
+            </span>
           </div>
         </footer>
       </main>

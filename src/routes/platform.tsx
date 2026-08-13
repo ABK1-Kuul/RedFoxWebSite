@@ -212,7 +212,7 @@ const HTML = `
 </div>
 </div>
 <div class="max-w-[1280px] mx-auto mt-xl pt-md border-t border-outline-variant/10 text-xs text-on-surface-variant flex justify-between">
-<p class="">© 2024 RedFox Security Systems. All rights reserved.</p>
+<p class="">© 2026 BitLabs Technology PLC. All rights reserved.</p>
 <div class="flex gap-md">
 <a class="hover:text-white" href="#">Privacy Policy</a>
 <a class="hover:text-white" href="#">Terms of Service</a>

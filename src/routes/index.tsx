@@ -79,19 +79,19 @@ const HTML = `
 <!-- Trust Bar -->
 <section class="py-12 border-y border-outline-variant bg-surface-container-lowest">
 <div class="container max-w-container-max-width mx-auto px-margin-desktop">
-<p class="text-center font-label-sm text-label-sm text-on-surface-variant mb-8 uppercase tracking-widest opacity-70">Trusted by 500+ Security Teams Worldwide</p>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mb-8 uppercase tracking-widest opacity-70">Securing High-Risk Organizations Across Global Sectors</p>
 <div class="ticker-container overflow-hidden">
 <div class="flex gap-20 animate-scroll w-[200%] grayscale opacity-40">
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">FORTUNE 500</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">TECHFLOW</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">CYBERGUARD</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">NEXUS SEC</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">CLOUDSAFE</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">FORTUNE 500</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">TECHFLOW</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">CYBERGUARD</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">NEXUS SEC</div>
-<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">CLOUDSAFE</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">FINANCIAL SERVICES</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">HEALTHCARE SYSTEMS</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">GLOBAL TECH</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">GOVERNMENT INFRASTRUCTURE</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">ENERGY & LOGISTICS</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">FINANCIAL SERVICES</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">HEALTHCARE SYSTEMS</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">GLOBAL TECH</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">GOVERNMENT INFRASTRUCTURE</div>
+<div class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-on-surface">ENERGY & LOGISTICS</div>
 </div>
 </div>
 </div>
@@ -111,18 +111,18 @@ const HTML = `
 </div>
 <div class="matte-card p-8 rounded-sm border-t-2 border-t-outline hover:bg-surface-container-high transition-colors duration-300">
 <span class="material-symbols-outlined text-outline text-4xl mb-4" data-icon="analytics" style="font-variation-settings: 'FILL' 0;">analytics</span>
-<h3 class="font-headline-md text-headline-md mb-2">Enterprise Reporting</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Drill down into department-level risk metrics with automated monthly intelligence reports.</p>
+<h3 class="font-headline-md text-headline-md mb-2">Human Risk Index (HRI)</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Drill down into department-level risk metrics with automated real-time intelligence reporting.</p>
 </div>
 <div class="matte-card p-8 rounded-sm border-t-2 border-t-brand-crimson hover:bg-surface-container-high transition-colors duration-300">
 <span class="material-symbols-outlined text-brand-crimson text-4xl mb-4" data-icon="verified_user" style="font-variation-settings: 'FILL' 0;">verified_user</span>
 <h3 class="font-headline-md text-headline-md mb-2">Compliance Mastery</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">Automate ISO 27001, SOC2, and GDPR training pathways with immutable audit trails.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Automate ISO 27001, SOC 2, and GDPR training pathways with immutable audit trails.</p>
 </div>
 <div class="matte-card p-8 rounded-sm border-t-2 border-t-outline hover:bg-surface-container-high transition-colors duration-300">
 <span class="material-symbols-outlined text-outline text-4xl mb-4" data-icon="psychology" style="font-variation-settings: 'FILL' 0;">psychology</span>
-<h3 class="font-headline-md text-headline-md mb-2">Human Risk Scoring</h3>
-<p class="font-body-md text-body-md text-on-surface-variant">AI-driven insights into employee behavior to predict vulnerabilities before they are exploited.</p>
+<h3 class="font-headline-md text-headline-md mb-2">Micro-Learning Modules</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Workflow-native 2-minute micro-training segments delivered in Slack, Teams, and Web.</p>
 </div>
 </div>
 </section>
@@ -182,75 +182,95 @@ const HTML = `
 <!-- Pricing Section -->
 <section class="py-24 px-margin-desktop container max-w-container-max-width mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg mb-4">Scalable Protection</h2>
-<div class="flex items-center justify-center gap-4">
-<span class="font-label-md text-on-surface">Monthly</span>
-<button class="w-12 h-6 bg-surface-container-highest rounded-full relative p-1 transition-all" id="pricingToggle">
-<div class="w-4 h-4 bg-brand-crimson rounded-full transform transition-transform" id="toggleKnob"></div>
-</button>
-<span class="font-label-md text-on-surface-variant">Yearly <span class="text-on-surface text-label-sm">(Save 20%)</span></span>
+<span class="text-brand-crimson text-xs font-bold uppercase tracking-widest block mb-2">TRANSPARENT ENTERPRISE LICENSING</span>
+<h2 class="font-headline-lg text-headline-lg mb-4">Scalable Protection for Every Team</h2>
+<p class="text-on-surface-variant text-body-md max-w-xl mx-auto">Predictable per-user pricing with zero hidden fees and full compliance mapping.</p>
 </div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-5xl mx-auto">
+<!-- Starter Plan -->
+<div class="matte-card p-8 rounded-sm relative border border-outline-variant hover:border-outline transition-colors flex flex-col justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Starter</h3>
+<p class="text-on-surface-variant text-sm mb-6">For teams up to 250 active users needing simulation essentials.</p>
+<div class="mb-6">
+<span class="font-display-lg text-display-lg">$3.50</span>
+<span class="text-on-surface-variant text-xs">/ user / month</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
-<!-- Growth Plan -->
-<div class="matte-card p-10 rounded-sm relative border border-outline-variant hover:border-outline transition-colors">
-<h3 class="font-headline-md text-headline-md mb-2">Growth</h3>
-<p class="text-on-surface-variant mb-8">For mid-market teams needing simulation essentials.</p>
-<div class="mb-8">
-<span class="font-display-lg text-display-lg">$4.50</span>
-<span class="text-on-surface-variant">/user/month</span>
-</div>
-<ul class="space-y-4 mb-10">
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Unlimited Phishing Tests</span>
+<ul class="space-y-3 mb-8 text-sm">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Up to 250 Active Users</span>
 </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Standard Content Library</span>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Monthly Phishing Campaigns</span>
 </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Basic Reporting Dashboards</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Active Directory Sync</span>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Core Micro-Learning Library</span>
 </li>
 </ul>
-<button class="w-full py-4 border border-outline text-on-surface font-label-md rounded hover:bg-surface-container-low transition-all">Get Started</button>
 </div>
+<a href="/pricing" class="w-full text-center py-3 border border-outline text-on-surface font-label-md rounded hover:bg-surface-container-low transition-all font-bold block uppercase tracking-wider text-xs">View Plan Details</a>
+</div>
+
+<!-- Professional Plan -->
+<div class="matte-card p-8 rounded-sm relative bg-surface-container-low border-2 border-brand-crimson flex flex-col justify-between shadow-xl">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-crimson text-white px-3 py-0.5 rounded-sm text-[10px] font-bold uppercase tracking-widest">Most Popular</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-2 text-white">Professional</h3>
+<p class="text-on-surface-variant text-sm mb-6">Advanced threat simulations & 1-click incident reporting.</p>
+<div class="mb-6">
+<span class="font-display-lg text-display-lg text-white">$6.00</span>
+<span class="text-on-surface-variant text-xs">/ user / month</span>
+</div>
+<ul class="space-y-3 mb-8 text-sm">
+<li class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Up to 1,000 Active Users</span>
+</li>
+<li class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Continuous Adaptive Phishing</span>
+</li>
+<li class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>1-Click Threat Button & AI Triage</span>
+</li>
+<li class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Full Human Risk Index (HRI)</span>
+</li>
+</ul>
+</div>
+<a href="/pricing" class="w-full text-center py-3 bg-brand-crimson text-white font-label-md rounded hover:opacity-90 transition-all font-bold block uppercase tracking-wider text-xs shadow-md">Start 14-Day Trial</a>
+</div>
+
 <!-- Enterprise Plan -->
-<div class="matte-card p-10 rounded-sm relative bg-surface-container-low border-2 border-brand-crimson">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-crimson text-white px-4 py-0.5 rounded-sm text-label-sm font-bold uppercase tracking-widest">Most Popular</div>
+<div class="matte-card p-8 rounded-sm relative border border-outline-variant hover:border-outline transition-colors flex flex-col justify-between">
+<div>
 <h3 class="font-headline-md text-headline-md mb-2">Enterprise</h3>
-<p class="text-on-surface-variant mb-8">For global organizations requiring deep integration.</p>
-<div class="mb-8">
+<p class="text-on-surface-variant text-sm mb-6">Custom threat models & dedicated threat architect.</p>
+<div class="mb-6">
 <span class="font-display-lg text-display-lg">Custom</span>
+<span class="text-on-surface-variant text-xs">annual SLA</span>
 </div>
-<ul class="space-y-4 mb-10">
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-brand-crimson text-lg" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-body-md font-semibold">Everything in Growth +</span>
+<ul class="space-y-3 mb-8 text-sm">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Unlimited Users (1,000+)</span>
 </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Deep API Integration</span>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>Dedicated Threat Architect</span>
 </li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Custom Brand Environments</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">Dedicated Success Manager</span>
-</li>
-<li class="flex items-center gap-3">
-<span class="material-symbols-outlined text-on-surface text-lg" data-icon="check">check</span>
-<span class="font-body-md">SOC2/ISO Compliance Center</span>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-brand-crimson text-sm">check</span>
+<span>24/7 Priority SLA & SIEM API</span>
 </li>
 </ul>
-<button class="w-full py-4 bg-brand-crimson text-white font-label-md rounded hover:opacity-90 transition-all">Contact Sales</button>
+</div>
+<a href="/contact" class="w-full text-center py-3 border border-outline text-on-surface font-label-md rounded hover:bg-surface-container-low transition-all font-bold block uppercase tracking-wider text-xs">Contact Architects</a>
 </div>
 </div>
 </section>
@@ -310,7 +330,7 @@ const HTML = `
 </div>
 </div>
 <div class="w-full pt-12 border-t border-outline-variant/20 flex flex-col sm:flex-row justify-between items-center gap-4">
-<p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 RedFox Cybersecurity. All rights reserved.</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 2026 BitLabs Technology PLC. All rights reserved.</p>
 <div class="flex gap-6">
 <span class="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer" data-icon="public">public</span>
 <span class="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer" data-icon="share">share</span>
